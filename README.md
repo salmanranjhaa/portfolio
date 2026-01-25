@@ -4,7 +4,7 @@ A modern, responsive portfolio website showcasing my work in Data Science, AI, a
 
 ## 🌐 Live Website
 
-[View Live Portfolio](https://your-username.github.io/portfolio/) *(Update this link after deployment)*
+[View Live Portfolio](https://salmanranjhaa.github.io/portfolio/)
 
 ## 🎯 About
 
