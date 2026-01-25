@@ -240,10 +240,11 @@
             <div class="section-header">
                 <span class="section-tag">Technical Arsenal</span>
                 <h2 class="section-title">Skills & Expertise</h2>
+                <p class="section-subtitle">Click on any skill card to learn more about my experience and projects</p>
             </div>
             <div class="skills-grid">
-                <!-- Programming -->
-                <div class="skill-category">
+                <!-- Programming Languages -->
+                <div class="skill-category interactive-card" data-skill="programming">
                     <div class="skill-icon">
                         <svg class="animated-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                             <rect x="10" y="20" width="80" height="60" rx="5" fill="url(#gradProg)" stroke="#667eea"
@@ -269,37 +270,53 @@
                             </defs>
                         </svg>
                     </div>
-                    <h3>Programming</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span class="skill-name">Python</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="95"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">SQL</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">VBA</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="75"></div>
-                            </div>
-                        </div>
-                    </div>
+                    <h3>Programming Languages</h3>
                     <div class="skill-tags">
-                        <span>Pandas</span>
-                        <span>NumPy</span>
-                        <span>Scikit-learn</span>
-                        <span>PyTorch</span>
+                        <span class="skill-badge expert">Python</span>
+                        <span class="skill-badge expert">Java</span>
+                        <span class="skill-badge expert">JavaScript</span>
+                        <span class="skill-badge advanced">SQL</span>
+                        <span class="skill-badge intermediate">VBA</span>
+                        <span class="skill-badge intermediate">R</span>
                     </div>
+                    <button class="skill-learn-more">Learn More →</button>
+                </div>
+
+                <!-- Web Development -->
+                <div class="skill-category interactive-card" data-skill="webdev">
+                    <div class="skill-icon">
+                        <svg class="animated-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="15" y="25" width="70" height="50" rx="3" fill="url(#gradWeb)" stroke="#4facfe"
+                                stroke-width="2" />
+                            <line x1="15" y1="35" x2="85" y2="35" stroke="#4facfe" stroke-width="1.5" />
+                            <circle cx="22" cy="30" r="1.5" fill="#f5576c" />
+                            <circle cx="28" cy="30" r="1.5" fill="#ffbe0b" />
+                            <circle cx="34" cy="30" r="1.5" fill="#06ffa5" />
+                            <text x="25" y="50" font-family="monospace" font-size="10" fill="#4facfe">&lt;/&gt;</text>
+                            <text x="45" y="50" font-family="monospace" font-size="10" fill="#00f2fe">{ }</text>
+                            <text x="60" y="50" font-family="monospace" font-size="10" fill="#4facfe">#</text>
+                            <defs>
+                                <linearGradient id="gradWeb" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#e8f9ff;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#f0f8ff;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3>Web Development</h3>
+                    <div class="skill-tags">
+                        <span class="skill-badge expert">HTML5</span>
+                        <span class="skill-badge expert">CSS3</span>
+                        <span class="skill-badge expert">JavaScript</span>
+                        <span class="skill-badge advanced">React</span>
+                        <span class="skill-badge advanced">Node.js</span>
+                        <span class="skill-badge intermediate">Next.js</span>
+                    </div>
+                    <button class="skill-learn-more">Learn More →</button>
                 </div>
 
                 <!-- ML & AI -->
-                <div class="skill-category">
+                <div class="skill-category interactive-card" data-skill="mlai">
                     <div class="skill-icon">
                         <svg class="animated-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="50" cy="50" r="25" fill="url(#gradAI)" class="pulse-animation" />
@@ -332,36 +349,19 @@
                         </svg>
                     </div>
                     <h3>ML & AI</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span class="skill-name">Deep Learning</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">NLP</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="95"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Computer Vision</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="80"></div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="skill-tags">
-                        <span>BERT</span>
-                        <span>GPT</span>
-                        <span>Transformers</span>
-                        <span>BERTopic</span>
+                        <span class="skill-badge expert">PyTorch</span>
+                        <span class="skill-badge expert">Scikit-learn</span>
+                        <span class="skill-badge expert">Transformers</span>
+                        <span class="skill-badge advanced">TensorFlow</span>
+                        <span class="skill-badge expert">BERT</span>
+                        <span class="skill-badge expert">GPT</span>
                     </div>
+                    <button class="skill-learn-more">Learn More →</button>
                 </div>
 
                 <!-- Data Engineering -->
-                <div class="skill-category">
+                <div class="skill-category interactive-card" data-skill="dataeng">
                     <div class="skill-icon">
                         <svg class="animated-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                             <g class="gear-rotate">
@@ -385,35 +385,19 @@
                         </svg>
                     </div>
                     <h3>Data Engineering</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span class="skill-name">ETL Pipelines</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Web Scraping</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="95"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">API Integration</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="88"></div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="skill-tags">
-                        <span>Beautiful Soup</span>
-                        <span>Selenium</span>
-                        <span>REST API</span>
+                        <span class="skill-badge expert">Pandas</span>
+                        <span class="skill-badge expert">NumPy</span>
+                        <span class="skill-badge expert">Beautiful Soup</span>
+                        <span class="skill-badge expert">Selenium</span>
+                        <span class="skill-badge advanced">Apache Spark</span>
+                        <span class="skill-badge advanced">Airflow</span>
                     </div>
+                    <button class="skill-learn-more">Learn More →</button>
                 </div>
 
                 <!-- Databases -->
-                <div class="skill-category">
+                <div class="skill-category interactive-card" data-skill="databases">
                     <div class="skill-icon">
                         <svg class="animated-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                             <ellipse cx="50" cy="30" rx="30" ry="10" fill="url(#gradDB1)" class="db-pulse"
@@ -443,36 +427,19 @@
                         </svg>
                     </div>
                     <h3>Databases</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span class="skill-name">SQL Databases</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="92"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">NoSQL</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Graph Databases</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="80"></div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="skill-tags">
-                        <span>PostgreSQL</span>
-                        <span>MongoDB</span>
-                        <span>Neo4j</span>
-                        <span>Oracle</span>
+                        <span class="skill-badge expert">PostgreSQL</span>
+                        <span class="skill-badge expert">MySQL</span>
+                        <span class="skill-badge advanced">MongoDB</span>
+                        <span class="skill-badge advanced">Neo4j</span>
+                        <span class="skill-badge advanced">Oracle</span>
+                        <span class="skill-badge intermediate">Redis</span>
                     </div>
+                    <button class="skill-learn-more">Learn More →</button>
                 </div>
 
                 <!-- Visualization -->
-                <div class="skill-category">
+                <div class="skill-category interactive-card" data-skill="visualization">
                     <div class="skill-icon">
                         <svg class="animated-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                             <line x1="20" y1="80" x2="80" y2="80" stroke="#667eea" stroke-width="2" />
@@ -493,36 +460,50 @@
                                 style="animation-delay: 0.9s" />
                         </svg>
                     </div>
-                    <h3>Visualization</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span class="skill-name">Tableau</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Python Viz</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="95"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">PowerBI</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="85"></div>
-                            </div>
-                        </div>
-                    </div>
+                    <h3>Data Visualization</h3>
                     <div class="skill-tags">
-                        <span>Plotly</span>
-                        <span>Seaborn</span>
-                        <span>Matplotlib</span>
+                        <span class="skill-badge expert">Tableau</span>
+                        <span class="skill-badge expert">PowerBI</span>
+                        <span class="skill-badge expert">Plotly</span>
+                        <span class="skill-badge expert">Seaborn</span>
+                        <span class="skill-badge advanced">D3.js</span>
+                        <span class="skill-badge expert">Matplotlib</span>
                     </div>
+                    <button class="skill-learn-more">Learn More →</button>
+                </div>
+
+                <!-- Tools & Platforms -->
+                <div class="skill-category interactive-card" data-skill="tools">
+                    <div class="skill-icon">
+                        <svg class="animated-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="25" y="25" width="50" height="50" rx="5" fill="url(#gradTools)" stroke="#f5576c"
+                                stroke-width="2" />
+                            <line x1="35" y1="40" x2="65" y2="40" stroke="#fff" stroke-width="2" />
+                            <line x1="35" y1="50" x2="65" y2="50" stroke="#fff" stroke-width="2" />
+                            <line x1="35" y1="60" x2="55" y2="60" stroke="#fff" stroke-width="2" />
+                            <circle cx="65" cy="35" r="8" fill="#ffbe0b" class="node-pulse" />
+                            <defs>
+                                <linearGradient id="gradTools" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#f093fb;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#f5576c;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                    </div>
+                    <h3>Tools & Platforms</h3>
+                    <div class="skill-tags">
+                        <span class="skill-badge expert">Git/GitHub</span>
+                        <span class="skill-badge expert">Docker</span>
+                        <span class="skill-badge advanced">AWS</span>
+                        <span class="skill-badge advanced">VS Code</span>
+                        <span class="skill-badge intermediate">Kubernetes</span>
+                        <span class="skill-badge advanced">Linux</span>
+                    </div>
+                    <button class="skill-learn-more">Learn More →</button>
                 </div>
 
                 <!-- Languages -->
-                <div class="skill-category">
+                <div class="skill-category interactive-card" data-skill="languages">
                     <div class="skill-icon">
                         <svg class="animated-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="50" cy="50" r="30" fill="url(#gradGlobe)" class="globe-rotate" />
@@ -550,95 +531,88 @@
                         </svg>
                     </div>
                     <h3>Languages</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <span class="skill-name">English</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="100"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Urdu/Hindi</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="100"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Italian</span>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="75"></div>
-                            </div>
-                        </div>
-                    </div>
                     <div class="skill-tags">
-                        <span>Turkish (Conv.)</span>
-                        <span>German (Beginner)</span>
+                        <span class="skill-badge native">English</span>
+                        <span class="skill-badge native">Urdu/Hindi</span>
+                        <span class="skill-badge intermediate">Italian</span>
+                        <span class="skill-badge basic">Turkish</span>
+                        <span class="skill-badge basic">German</span>
                     </div>
+                    <button class="skill-learn-more">Learn More →</button>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Skill Detail Modal -->
+    <div class="modal" id="skillModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-body" id="modalBody">
+                <!-- Content will be dynamically inserted -->
+            </div>
+        </div>
+    </div>
+
     <!-- Education Section -->
     <section class="education">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Academic Background</span>
-                <h2 class="section-title">Education</h2>
-            </div>
-            <div class="education-grid">
-                <div class="education-card">
-                    <div class="education-header">
-                        <div class="education-icon">🎓</div>
-                        <div>
-                            <h3>Master's in Computer Science</h3>
-                            <p class="education-focus">Data Science and AI</p>
-                        </div>
-                    </div>
-                    <p class="education-institution">Universität St. Gallen</p>
-                    <p class="education-location">St Gallen, Switzerland</p>
-                    <p class="education-date">Sept. 2024 — Present</p>
-                    <div class="education-courses">
-                        <h4>Relevant Courses</h4>
-                        <div class="course-tags">
-                            <span>ML/DL</span>
-                            <span>NLP</span>
-                            <span>Advanced Databases</span>
-                            <span>Data Science</span>
-                            <span>Cyber Security</span>
-                            <span>Cryptography</span>
-                            <span>Marketing Analytics</span>
-                        </div>
+            <h2 class="section-title">Education</h2>
+        </div>
+        <div class="education-grid">
+            <div class="education-card">
+                <div class="education-header">
+                    <div class="education-icon">🎓</div>
+                    <div>
+                        <h3>Master's in Computer Science</h3>
+                        <p class="education-focus">Data Science and AI</p>
                     </div>
                 </div>
+                <p class="education-institution">Universität St. Gallen</p>
+                <p class="education-location">St Gallen, Switzerland</p>
+                <p class="education-date">Sept. 2024 — Present</p>
+                <div class="education-courses">
+                    <h4>Relevant Courses</h4>
+                    <div class="course-tags">
+                        <span>ML/DL</span>
+                        <span>NLP</span>
+                        <span>Advanced Databases</span>
+                        <span>Data Science</span>
+                        <span>Cyber Security</span>
+                        <span>Cryptography</span>
+                        <span>Marketing Analytics</span>
+                    </div>
+                </div>
+            </div>
 
-                <div class="education-card">
-                    <div class="education-header">
-                        <div class="education-icon">🎓</div>
-                        <div>
-                            <h3>Bachelor's in Economics, Management, and Computer Science</h3>
-                            <p class="education-focus">Interdisciplinary Program</p>
-                        </div>
+            <div class="education-card">
+                <div class="education-header">
+                    <div class="education-icon">🎓</div>
+                    <div>
+                        <h3>Bachelor's in Economics, Management, and Computer Science</h3>
+                        <p class="education-focus">Interdisciplinary Program</p>
                     </div>
-                    <p class="education-institution">Bocconi University</p>
-                    <p class="education-location">Milan, Italy</p>
-                    <p class="education-date">Sept. 2018 — May 2021</p>
-                    <div class="education-courses">
-                        <h4>Relevant Courses</h4>
-                        <div class="course-tags">
-                            <span>Machine Learning</span>
-                            <span>Big Data</span>
-                            <span>Finance</span>
-                            <span>Econometrics</span>
-                            <span>Marketing Analytics</span>
-                        </div>
-                        <div class="thesis-info">
-                            <strong>Thesis:</strong> Analyzed social media engagement and Formula 1 brand growth using
-                            Twitter data and econometric analysis
-                        </div>
+                </div>
+                <p class="education-institution">Bocconi University</p>
+                <p class="education-location">Milan, Italy</p>
+                <p class="education-date">Sept. 2018 — May 2021</p>
+                <div class="education-courses">
+                    <h4>Relevant Courses</h4>
+                    <div class="course-tags">
+                        <span>Machine Learning</span>
+                        <span>Big Data</span>
+                        <span>Finance</span>
+                        <span>Econometrics</span>
+                        <span>Marketing Analytics</span>
+                    </div>
+                    <div class="thesis-info">
+                        <strong>Thesis:</strong> Analyzed social media engagement and Formula 1 brand growth using
+                        Twitter data and econometric analysis
                     </div>
                 </div>
             </div>
+        </div>
         </div>
     </section>
 
