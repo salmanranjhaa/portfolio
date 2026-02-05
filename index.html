@@ -26,6 +26,7 @@
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
@@ -64,11 +65,11 @@
                 </div>
                 <div class="hero-stats">
                     <div class="stat-item">
-                        <span class="stat-number" data-target="150000">0</span>
-                        <span class="stat-label">Data Points Processed</span>
+                        <span class="stat-number" data-target="167000">0</span>
+                        <span class="stat-label">Entrepreneurial Biographies Analyzed</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number" data-target="3">0</span>
+                        <span class="stat-number" data-target="2">0</span>
                         <span class="stat-label">Active Roles</span>
                     </div>
                     <div class="stat-item">
@@ -151,7 +152,7 @@
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
-                        <span class="timeline-date">Sept. 2025 — Present</span>
+                        <span class="timeline-date">Sept. 2024 — Present</span>
                         <h3 class="timeline-title">Research Assistant</h3>
                         <p class="timeline-company">Institute of Responsible Innovation, University of St. Gallen</p>
                         <ul class="timeline-highlights">
@@ -234,7 +235,103 @@
         </div>
     </section>
 
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Selected Work</span>
+                <h2 class="section-title">Featured Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <!-- HuggingFace MMF Project -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>HuggingFace Model Metadata Framework (HF-MMF)</h3>
+                        <span class="project-date">Sept. 2025 — Dec. 2025</span>
+                    </div>
+                    <p class="project-institution">ML/AI Program, University of St. Gallen</p>
+                    <p class="project-description">
+                        Architected scalable metadata pipeline to curate datasets (50TB-1.6PB) enabling Weight Space
+                        Learning research
+                    </p>
+                    <ul class="project-highlights">
+                        <li>Designed multi-attribution scoring system evaluating 4 product metrics: Popularity
+                            (downloads), Originality (research backing), Influence (derivative models), and
+                            Documentation quality</li>
+                        <li>Implemented parallel workflow with atomic chaining, retry logic, and process-based
+                            parallelism supporting multi-worker coordination</li>
+                        <li>Developed distributed parallel download system with CI/CD pipeline, containerization, and
+                            automated deployment</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>Pandas</span>
+                        <span>SQLite</span>
+                        <span>HuggingFace Hub API</span>
+                        <span>Dask</span>
+                        <span>PyTorch</span>
+                        <span>Plotly</span>
+                    </div>
+                </div>
+
+                <!-- DITE Platform -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>DITE: Distributed Task Execution Platform</h3>
+                        <span class="project-date">Sept. 2025 — Dec. 2025</span>
+                    </div>
+                    <p class="project-institution">Advanced Software & Systems Engineering, University of St. Gallen</p>
+                    <p class="project-description">
+                        Led full-stack product development for federated microservices platform
+                    </p>
+                    <ul class="project-highlights">
+                        <li>Designed product architecture balancing technical complexity with user needs: event-driven
+                            communication (MQTT, WebSub), semantic file discovery (OpenAPI), and IAM security
+                            integration</li>
+                        <li>Managed product trade-offs evaluating standardized protocols vs. custom solutions to ensure
+                            federation autonomy</li>
+                        <li>Shipped production-ready system with CI/CD pipeline, containerization, and automated
+                            deployment achieving integration with 15 distributed federations</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <span>React</span>
+                        <span>Vite</span>
+                        <span>MQTT</span>
+                        <span>WebSub</span>
+                        <span>GitHub Actions</span>
+                    </div>
+                </div>
+
+                <!-- Document Extraction System -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Document Information Extraction System</h3>
+                        <span class="project-date">Feb. 2025 — May 2025</span>
+                    </div>
+                    <p class="project-institution">Natural Language Processing, University of St. Gallen</p>
+                    <p class="project-description">
+                        Enhanced multi-technique transformer-based LLM prompting to solve low-resource document
+                        extraction
+                    </p>
+                    <ul class="project-highlights">
+                        <li>Applied product thinking to navigate accuracy-cost-latency trade-offs with LLMs vs. QA
+                            baseline</li>
+                        <li>Conducted data quality experiments focusing on synthetic strategies, achieving 52% F1 with
+                            LLMs vs. 0% baseline</li>
+                    </ul>
+                    <div class="tech-stack">
+                        <span>PyTorch</span>
+                        <span>Transformers</span>
+                        <span>GPT-4</span>
+                        <span>Gemini 1.5 Pro</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Skills Section -->
+
     <section class="skills" id="skills">
         <div class="container">
             <div class="section-header">
@@ -582,6 +679,11 @@
                         <span>Cyber Security</span>
                         <span>Cryptography</span>
                         <span>Marketing Analytics</span>
+                        <span>Software Engineering</span>
+                    </div>
+                    <div class="thesis-info">
+                        <strong>Thesis:</strong> Neural Decoders for Quantum Error Correction in Space Communications
+                        (AI optimization for quantum networks)
                     </div>
                 </div>
             </div>
@@ -687,11 +789,11 @@
 
                 <div class="contact-cta">
                     <div class="cta-box">
-                        <h3>Open to Opportunities</h3>
-                        <p>I'm currently seeking opportunities at the intersection of technology, strategy, and applied
-                            AI. Let's discuss how we can collaborate to translate research insights into scalable,
-                            sustainable solutions.</p>
-                        <a href="mailto:salman.ranjha@outlook.com" class="btn btn-primary">Start a Conversation</a>
+                        <h3>Let's Connect</h3>
+                        <p>I'm interested in roles at the intersection of AI product development, research engineering,
+                            and data science.
+                            Feel free to reach out to discuss opportunities or collaboration.\u003c/p\u003e\r\n <a
+                                href="mailto:salman.ranjha@outlook.com" class="btn btn-primary">Get in Touch</a>
                     </div>
                 </div>
             </div>
