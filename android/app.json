@@ -1,0 +1,30 @@
+{
+  "expo": {
+    "name": "Salman Ranjha Portfolio",
+    "slug": "salman-ranjha-portfolio",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#0f0f1a"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.salmanranjha.portfolio"
+    },
+    "android": {
+      "package": "com.salmanranjha.portfolio"
+    },
+    "web": {},
+    "plugins": [
+      "expo-asset",
+      "expo-font",
+      "expo-mail-composer",
+      "expo-web-browser"
+    ]
+  }
+}

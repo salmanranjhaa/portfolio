@@ -1,0 +1,12 @@
+This is a placeholder file. 
+
+For now, the app will work without icons. When you're ready to add proper icons:
+
+1. Create icon.png (1024x1024)
+2. Create splash.png (1242x2436)  
+3. Create adaptive-icon.png (1024x1024)
+4. Create favicon.png (48x48)
+
+Use https://www.appicon.co/ to generate all sizes automatically.
+
+The app will run fine without these for development!
