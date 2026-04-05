@@ -7,19 +7,21 @@ const skillDetails = {
         skills: [
             "Python",
             "Java",
-            "JavaScript",
             "SQL",
-            "R"
+            "JavaScript",
+            "HTML/CSS",
+            "TypeScript"
         ]
     },
     webdev: {
         title: "Web Development",
         skills: [
-            "HTML5 & CSS3",
-            "JavaScript",
             "React",
             "Vite",
-            "Responsive Design"
+            "TailwindCSS",
+            "FastAPI",
+            "REST API Design",
+            "Capacitor"
         ]
     },
     mlai: {
@@ -27,19 +29,21 @@ const skillDetails = {
         skills: [
             "PyTorch",
             "Transformers (BERT, BART)",
-            "GPT-4 & Gemini",
-            "Scikit-learn",
-            "NLP & Text Analysis",
-            "BERTopic"
+            "LLM Integration (OpenAI, Gemini, Groq, DeepSeek)",
+            "RAG System Design",
+            "Prompt Engineering",
+            "NLP & Text Analysis"
         ]
     },
     dataeng: {
         title: "Data Engineering",
         skills: [
-            "Pandas & NumPy",
-            "Web Scraping (Selenium)",
             "ETL Pipelines",
-            "Dask (Parallel Processing)",
+            "Dask Parallel Processing",
+            "API Integration",
+            "Data Cleaning",
+            "Feature Engineering",
+            "Pipeline Reliability and Monitoring",
             "HuggingFace Hub API"
         ]
     },
@@ -48,7 +52,9 @@ const skillDetails = {
         skills: [
             "PostgreSQL",
             "MySQL",
+            "MongoDB",
             "SQLite",
+            "Neo4j",
             "Oracle Database"
         ]
     },
@@ -56,9 +62,11 @@ const skillDetails = {
         title: "Data Visualization",
         skills: [
             "Tableau",
+            "PowerBI",
             "Plotly",
             "Seaborn",
-            "Matplotlib"
+            "Matplotlib",
+            "Data Storytelling"
         ]
     },
     tools: {
@@ -67,9 +75,9 @@ const skillDetails = {
             "Git & GitHub",
             "Docker",
             "GitHub Actions (CI/CD)",
-            "VS Code",
-            "Jupyter Notebooks",
-            "MQTT & WebSub"
+            "Google Cloud Platform",
+            "Microsoft Azure",
+            "Microservices Architecture"
         ]
     },
     languages: {
@@ -77,7 +85,7 @@ const skillDetails = {
         skills: [
             "English - Fluent",
             "Urdu/Hindi - Native",
-            "Italian - Intermediate",
+            "Italian - Professional",
             "Turkish - Conversational",
             "German - Beginner"
         ]

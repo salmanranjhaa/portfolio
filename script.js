@@ -55,12 +55,12 @@ window.addEventListener('scroll', highlightNavigation);
 // ===========================
 const typingText = document.querySelector('.typing-text');
 const titles = [
-    'Data Scientist',
-    'AI Researcher',
+    'Data Engineer',
+    'Applied AI Engineer',
     'Machine Learning Engineer',
-    'NLP Specialist',
+    'NLP Systems Builder',
     'Research Assistant',
-    'Teaching Assistant'
+    'Technical Business Analyst'
 ];
 
 let titleIndex = 0;
