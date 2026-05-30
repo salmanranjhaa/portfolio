@@ -4,7 +4,9 @@ A modern, responsive portfolio website showcasing my work in Data Science, AI, a
 
 ## 🌐 Live Website
 
-[View Live Portfolio](https://salmanranjhaa.github.io/portfolio/)
+[View Live Portfolio](https://www.salmanranjha.me)
+
+> `salmanranjha.me` and `www.salmanranjha.me` both work — bare domain redirects to `www.`
 
 ## 🎯 About
 
@@ -36,6 +38,28 @@ This portfolio website highlights my experience as a:
 - **Phone:** +41 (78) 338-5893
 - **LinkedIn:** [linkedin.com/in/salman-ranjha-934019177](https://linkedin.com/in/salman-ranjha-934019177)
 - **Location:** St Gallen, Switzerland
+
+## 🚀 Hosting & Deployment
+
+See [DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md) for the full setup — this covers the Docker container, Caddy reverse proxy, GCP VM, and DNS configuration.
+
+**Quick reference:**
+
+| What | Detail |
+|---|---|
+| VM | GCP `e2-medium`, zone `europe-west4`, external IP `34.17.37.87` |
+| Container | `portfolio-web` (nginx:alpine), port `8090` on host |
+| Reverse proxy | Caddy (inside `loadedout-frontend-1`), handles TLS automatically |
+| Domain | `salmanranjha.me` / `www.salmanranjha.me` (GoDaddy, A records → `34.17.37.87`) |
+
+To deploy an update:
+
+```bash
+# On the VM, inside /home/pehlacloud/projects/portfolio
+git pull
+docker compose build
+docker compose up -d
+```
 
 ## 📄 License
 
