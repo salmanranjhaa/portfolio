@@ -7,8 +7,26 @@ services:
     ports:
       - "8090:80"
     restart: unless-stopped
+    depends_on:
+      - articles-backend
     networks:
       - lifeplan-net
+
+  articles-backend:
+    build: ./articles-backend
+    container_name: portfolio-articles
+    environment:
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD:-changeme}
+      - JWT_SECRET=${JWT_SECRET:-change-this-in-production}
+      - DB_PATH=/data/articles.db
+    volumes:
+      - articles-data:/data
+    restart: unless-stopped
+    networks:
+      - lifeplan-net
+
+volumes:
+  articles-data:
 
 networks:
   lifeplan-net:

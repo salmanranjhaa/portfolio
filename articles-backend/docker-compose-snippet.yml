@@ -1,0 +1,36 @@
+# Add this service to your existing docker-compose.yml
+# The nginx config below assumes the portfolio nginx is named "portfolio"
+# and both services are on the same Docker network "web"
+
+services:
+
+  articles-api:
+    build: ./articles-backend
+    restart: unless-stopped
+    volumes:
+      - articles-data:/data
+    environment:
+      ADMIN_PASSWORD: "your-strong-password-here"
+      JWT_SECRET: "your-random-jwt-secret-here"
+      DB_PATH: /data/articles.db
+    networks:
+      - web
+
+volumes:
+  articles-data:
+
+# -------------------------------------------------------
+# Add to your nginx.conf (inside the server {} block):
+# -------------------------------------------------------
+#
+#   location /api/ {
+#       proxy_pass         http://articles-api:8001/;
+#       proxy_set_header   Host $host;
+#       proxy_set_header   X-Real-IP $remote_addr;
+#   }
+#
+# -------------------------------------------------------
+# This makes /api/articles map to the FastAPI service.
+# The JS in articles.html and article.html uses /api as
+# the base path in production automatically.
+# -------------------------------------------------------
