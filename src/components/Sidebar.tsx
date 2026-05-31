@@ -4,12 +4,12 @@ import { Menu, X, Home, User, BookOpen, Zap, Briefcase, FileText, Mail, Github, 
 import { AnimatePresence, motion } from 'framer-motion'
 
 const nav = [
-  { label: 'Home', to: '/', icon: Home, section: 'Main' },
-  { label: 'About', to: '/about', icon: User, section: 'Main' },
-  { label: 'Academic Projects', to: '/projects/academic', icon: BookOpen, section: 'Work' },
-  { label: 'Personal Projects', to: '/projects/personal', icon: Zap, section: 'Work' },
-  { label: 'Experience', to: '/experience', icon: Briefcase, section: 'Work' },
-  { label: 'Articles', to: '/articles', icon: FileText, section: 'Writing' },
+  { label: 'Home',              to: '/',                    icon: Home,     section: 'Main' },
+  { label: 'About',             to: '/about',               icon: User,     section: 'Main' },
+  { label: 'Academic Projects', to: '/projects/academic',   icon: BookOpen, section: 'Work' },
+  { label: 'Personal Projects', to: '/projects/personal',   icon: Zap,      section: 'Work' },
+  { label: 'Experience',        to: '/experience',          icon: Briefcase,section: 'Work' },
+  { label: 'Articles',          to: '/articles',            icon: FileText, section: 'Writing' },
 ]
 
 const sections = ['Main', 'Work', 'Writing']
@@ -20,50 +20,46 @@ export default function Sidebar() {
 
   return (
     <>
-      {/* Mobile toggle */}
       <button
         onClick={() => setOpen(true)}
-        className="fixed top-4 left-4 z-50 md:hidden bg-[#111] text-white p-2.5 rounded-lg"
+        className="fixed top-4 left-4 z-50 md:hidden bg-night text-paper p-2.5 rounded-lg border border-rule"
         aria-label="Open menu"
       >
         <Menu size={18} />
       </button>
 
-      {/* Overlay */}
       <AnimatePresence>
         {open && (
           <motion.div
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
             onClick={() => setOpen(false)}
-            className="fixed inset-0 bg-black/60 z-40 md:hidden"
+            className="fixed inset-0 bg-black/70 z-40 md:hidden"
           />
         )}
       </AnimatePresence>
 
-      {/* Sidebar */}
       <motion.aside
         className={`
-          fixed top-0 left-0 h-full w-[240px] bg-[#111] flex flex-col z-50
-          transition-transform duration-200
+          fixed top-0 left-0 h-full w-[240px] bg-night flex flex-col z-50
+          border-r border-rule transition-transform duration-200
           ${open ? 'translate-x-0' : '-translate-x-full md:translate-x-0'}
         `}
       >
-        {/* Close button mobile */}
         <button
           onClick={() => setOpen(false)}
-          className="absolute top-4 right-4 text-[#6a6a6a] hover:text-white md:hidden"
+          className="absolute top-4 right-4 text-muted hover:text-paper md:hidden"
           aria-label="Close menu"
         >
           <X size={16} />
         </button>
 
         {/* Brand */}
-        <div className="px-7 pt-9 pb-7 border-b border-[#1f1f1f]">
-          <div className="font-serif text-[1.15rem] text-[#f5f5f5] leading-tight mb-1.5">
+        <div className="px-7 pt-9 pb-7 border-b border-rule">
+          <div className="font-serif text-[1.15rem] text-paper leading-tight mb-1.5">
             Salman Ranjha
           </div>
-          <div className="text-[0.68rem] text-[#6a6a6a] uppercase tracking-widest leading-relaxed">
-            MSc CS, Data Science &amp; AI<br />University of St. Gallen
+          <div className="text-[0.65rem] text-muted uppercase tracking-widest leading-relaxed font-mono">
+            MSc Data Science &amp; AI<br />University of St. Gallen
           </div>
         </div>
 
@@ -71,7 +67,7 @@ export default function Sidebar() {
         <nav className="flex-1 py-5 overflow-y-auto">
           {sections.map(section => (
             <div key={section}>
-              <div className="px-7 pt-3.5 pb-1.5 text-[0.62rem] text-[#3a3a3a] uppercase tracking-[0.1em]">
+              <div className="px-7 pt-3.5 pb-1.5 text-[0.6rem] text-[#2a2d3e] uppercase tracking-[0.12em] font-mono">
                 {section}
               </div>
               {nav
@@ -85,8 +81,8 @@ export default function Sidebar() {
                     className={({ isActive }) => `
                       flex items-center gap-2.5 px-7 py-2.5 text-[0.82rem] transition-all duration-150 relative
                       ${isActive
-                        ? 'text-accent bg-[rgba(201,76,38,0.06)] before:absolute before:left-0 before:top-1.5 before:bottom-1.5 before:w-0.5 before:bg-accent before:rounded-r'
-                        : 'text-[#6a6a6a] hover:text-[#e8e4da] hover:bg-[#1a1a1a]'
+                        ? 'text-gold bg-[rgba(212,175,97,0.06)] before:absolute before:left-0 before:top-1.5 before:bottom-1.5 before:w-0.5 before:bg-gold before:rounded-r'
+                        : 'text-muted hover:text-papersoft hover:bg-[#10131e]'
                       }
                     `}
                   >
@@ -99,19 +95,19 @@ export default function Sidebar() {
         </nav>
 
         {/* Footer */}
-        <div className="px-7 py-5 border-t border-[#1f1f1f]">
-          <div className="flex items-center gap-2 text-[0.68rem] text-[#6a6a6a] mb-3">
-            <span className="w-1.5 h-1.5 rounded-full bg-green-400 flex-shrink-0" />
-            Open to opportunities in Switzerland
+        <div className="px-7 py-5 border-t border-rule">
+          <div className="flex items-center gap-2 text-[0.65rem] text-muted mb-3">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 flex-shrink-0" />
+            Open to opportunities
           </div>
           <div className="flex items-center gap-4">
-            <a href="mailto:salman.ranjha@outlook.com" className="text-[#6a6a6a] hover:text-accent transition-colors" title="Email">
+            <a href="mailto:salman.ranjha@outlook.com" className="text-muted hover:text-gold transition-colors" title="Email">
               <Mail size={14} />
             </a>
-            <a href="https://www.linkedin.com/in/salman-ranjha-934019177" target="_blank" rel="noopener noreferrer" className="text-[#6a6a6a] hover:text-accent transition-colors" title="LinkedIn">
+            <a href="https://www.linkedin.com/in/salman-ranjha-934019177" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-gold transition-colors" title="LinkedIn">
               <Linkedin size={14} />
             </a>
-            <a href="https://github.com/salmanranjhaa" target="_blank" rel="noopener noreferrer" className="text-[#6a6a6a] hover:text-accent transition-colors" title="GitHub">
+            <a href="https://github.com/salmanranjhaa" target="_blank" rel="noopener noreferrer" className="text-muted hover:text-gold transition-colors" title="GitHub">
               <Github size={14} />
             </a>
           </div>

@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
 import { ArrowRight } from 'lucide-react'
+import FadeIn from '../components/FadeIn'
 import PageHeader from '../components/PageHeader'
 
-const API = '/api'
+interface Article { id: string; title: string; excerpt?: string; published_at: string; reading_time?: number }
 
-interface Article { id: string; title: string; excerpt: string; published_at: string }
+const API_BASE = window.location.origin.includes('localhost') ? 'http://localhost:8001' : '/api'
 
 function formatDate(iso: string) {
   return new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
@@ -15,47 +15,44 @@ function formatDate(iso: string) {
 export default function Articles() {
   const [articles, setArticles] = useState<Article[]>([])
   const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(false)
 
   useEffect(() => {
-    fetch(`${API}/articles`)
+    fetch(`${API_BASE}/articles`)
       .then(r => r.json())
       .then(setArticles)
-      .catch(() => setError(true))
+      .catch(() => setArticles([]))
       .finally(() => setLoading(false))
   }, [])
 
   return (
     <div>
-      <PageHeader eyebrow="Articles" title="Writing." subtitle="On AI, enterprise software, systems, and whatever else is worth articulating properly." />
+      <PageHeader
+        eyebrow="Articles"
+        title="Things worth writing down."
+        subtitle="On AI, enterprise software, and whatever else demands articulation."
+      />
       <div className="px-10 py-10 max-w-2xl">
-        {loading && <p className="text-text-muted text-sm">Loading articles&hellip;</p>}
-        {error && <p className="text-text-muted text-sm">Could not load articles. Please try again later.</p>}
-        {!loading && !error && articles.length === 0 && (
-          <p className="text-text-muted text-sm text-center py-16">Nothing published yet. Check back soon.</p>
+        {loading && <p className="text-muted text-sm">Loading...</p>}
+        {!loading && articles.length === 0 && (
+          <p className="text-muted text-sm">No articles yet. Check back soon.</p>
         )}
-        {!loading && !error && articles.length > 0 && (
-          <div className="flex flex-col gap-4">
-            {articles.map((a, i) => (
-              <motion.div
-                key={a.id}
-                initial={{ opacity: 0, y: 12 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: i * 0.05 }}
-              >
-                <Link to={`/articles/${a.id}`}
-                  className="block bg-white border border-border rounded-lg px-7 py-6 group transition-all duration-200 hover:border-accent hover:shadow-sm">
-                  <div className="font-mono text-[0.68rem] text-text-muted mb-2">{formatDate(a.published_at)}</div>
-                  <h2 className="font-serif text-[1.1rem] font-bold text-[#111] mb-2 leading-snug group-hover:text-accent transition-colors">{a.title}</h2>
-                  {a.excerpt && <p className="text-[0.84rem] text-text-muted leading-relaxed mb-3">{a.excerpt}</p>}
-                  <span className="flex items-center gap-1.5 text-[0.75rem] font-mono text-accent">
-                    Read <ArrowRight size={12} />
-                  </span>
-                </Link>
-              </motion.div>
-            ))}
-          </div>
-        )}
+        <div className="space-y-3">
+          {articles.map((a, i) => (
+            <FadeIn key={a.id} delay={i * 0.05}>
+              <Link to={`/articles/${a.id}`}
+                className="group flex items-start justify-between gap-6 bg-night3 border border-rule rounded-lg px-6 py-5 hover:border-[rgba(212,175,97,0.3)] hover:bg-[#1c2035] transition-all duration-200">
+                <div className="flex-1 min-w-0">
+                  <div className="font-semibold text-[0.9rem] text-paper mb-1 group-hover:text-gold transition-colors">{a.title}</div>
+                  {a.excerpt && <p className="text-[0.78rem] text-muted leading-relaxed line-clamp-2">{a.excerpt}</p>}
+                  <div className="font-mono text-[0.65rem] text-muted mt-2">
+                    {formatDate(a.published_at)}{a.reading_time ? ` · ${a.reading_time} min read` : ''}
+                  </div>
+                </div>
+                <ArrowRight size={14} className="text-muted group-hover:text-gold transition-colors flex-shrink-0 mt-1" />
+              </Link>
+            </FadeIn>
+          ))}
+        </div>
       </div>
     </div>
   )

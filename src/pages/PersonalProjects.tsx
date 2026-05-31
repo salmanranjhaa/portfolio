@@ -1,38 +1,30 @@
-import { motion } from 'framer-motion'
 import { ExternalLink, Github } from 'lucide-react'
-import PageHeader from '../components/PageHeader'
 import FadeIn from '../components/FadeIn'
+import PageHeader from '../components/PageHeader'
 
 const projects = [
   {
     title: 'Loadedout',
-    badge: 'Live',
-    badgeHref: 'https://loadedout.online',
-    meta: 'FastAPI · Vertex AI · GCP · PostgreSQL',
-    desc: 'Full-stack personal health and fitness platform used daily. Covers workout logging, meal tracking, body weight history, and schedule management with Google Calendar sync and LLM-driven personalised coaching. Built on GCP with Vertex AI for the coaching layer. Started as a weekend experiment, ended up as a core part of the daily routine.',
-    tags: ['FastAPI', 'Vertex AI', 'GCP', 'PostgreSQL', 'Google Calendar API', 'LLM coaching'],
-    github: null,
+    tagline: 'Fitness and lifestyle tracking, rebuilt from scratch.',
+    desc: 'Full-stack fitness platform live at loadedout.online. Workout tracking, meal logging, AI-powered coaching via Vertex AI, and Google Calendar sync. Built entirely solo and used daily. The kind of project that starts as a weekend experiment and turns into a production system you refuse to stop improving.',
+    tags: ['FastAPI', 'Vertex AI', 'PostgreSQL', 'Google Calendar API', 'Python'],
     live: 'https://loadedout.online',
     featured: true,
   },
   {
     title: 'Weave',
-    badge: null,
-    meta: 'Multi-agent enterprise intelligence',
-    desc: 'Two AI agents over a shared ERP data layer: a RAG router performing parallel retrieval across PostgreSQL, ChromaDB, and Neo4j, and a ReACT agent running autonomous iterative reasoning across the same sources. Deployed on GCP via Docker Compose over a fully LLM-generated synthetic enterprise dataset (65 employees, 50+ tickets, 120+ Slack messages across 10 channels).',
-    tags: ['RAG', 'ReACT', 'Neo4j', 'ChromaDB', 'PostgreSQL', 'Docker', 'GCP'],
+    tagline: 'Enterprise RAG system with a proper agentic layer.',
+    desc: 'Multi-source RAG architecture spanning Postgres, Neo4j, Slack, and ERP data. ReACT agent trace panel, multi-source routing, and a Star Wars lightsaber colour scheme that somehow makes the interface feel right. Built to understand what production agentic systems actually require.',
+    tags: ['FastAPI', 'PostgreSQL', 'Neo4j', 'React', 'ReACT Agents', 'RAG'],
     github: 'https://github.com/salmanranjhaa',
-    live: null,
     featured: false,
   },
   {
     title: 'Pitwall',
-    badge: null,
-    meta: 'F1 race strategy simulator',
-    desc: 'Live F1 race management simulation where the user acts as race engineer across qualifying, tire strategy, and pit windows. Implements a BDI agent system for 20 AI drivers with distinct personalities and autonomous strategic plans, driven by LightGBM models trained on FastF1 telemetry from 2022 to 2024 across 24 circuits.',
-    tags: ['BDI Agents', 'LightGBM', 'React 19', 'TypeScript', 'FastAPI', 'FastF1', 'SQLite'],
+    tagline: 'F1 strategy and race data dashboard.',
+    desc: 'Real-time Formula 1 data visualisation and strategy analysis. Tyre degradation models, gap charts, pit window calculations. The design system from this project is what the rest of the portfolio borrows from.',
+    tags: ['React', 'TypeScript', 'FastAPI', 'F1 Data API'],
     github: 'https://github.com/salmanranjhaa/PitWall',
-    live: null,
     featured: false,
   },
 ]
@@ -40,52 +32,53 @@ const projects = [
 export default function PersonalProjects() {
   return (
     <div>
-      <PageHeader eyebrow="Personal Projects" title="Built for the sake of building." subtitle="Things that exist because a problem was interesting enough to ship a solution for. Most of them are still running." />
-      <div className="px-10 py-10 max-w-3xl">
-        <div className="flex flex-col gap-5">
-          {projects.map(({ title, badge, badgeHref, meta, desc, tags, github, live, featured }) => (
-            <FadeIn key={title}>
-              <motion.div
-                whileHover={{ y: -2 }}
-                className={`bg-white border rounded-lg p-7 transition-all duration-200 hover:shadow-sm ${featured ? 'border-l-[3px] border-accent' : 'border-border hover:border-[#c8bfb0]'}`}
-              >
-                <div className="flex items-start justify-between gap-4 mb-3">
-                  <div>
-                    <div className="flex items-center gap-3 mb-1">
-                      <h3 className="font-serif text-[1.1rem] font-bold text-[#111]">{title}</h3>
-                      {badge && badgeHref && (
-                        <a href={badgeHref} target="_blank" rel="noopener noreferrer"
-                          className="flex items-center gap-1 font-mono text-[0.68rem] text-accent border border-accent/30 bg-accent/5 px-2 py-0.5 rounded hover:bg-accent/10 transition-colors">
-                          <span className="w-1.5 h-1.5 rounded-full bg-green-400" />
-                          {badge}
-                        </a>
-                      )}
-                    </div>
-                    <p className="font-mono text-[0.7rem] text-text-muted">{meta}</p>
-                  </div>
-                  <div className="flex items-center gap-2.5 flex-shrink-0">
-                    {live && (
-                      <a href={live} target="_blank" rel="noopener noreferrer"
-                        className="flex items-center gap-1.5 text-[0.75rem] font-mono text-accent border border-accent/30 px-2.5 py-1 rounded hover:bg-accent/5 transition-colors">
-                        <ExternalLink size={11} /> Visit
-                      </a>
-                    )}
-                    {github && (
-                      <a href={github} target="_blank" rel="noopener noreferrer"
-                        className="flex items-center gap-1.5 text-[0.75rem] font-mono text-text-muted border border-border px-2.5 py-1 rounded hover:border-[#c8bfb0] hover:text-[#111] transition-colors">
-                        <Github size={11} /> GitHub
-                      </a>
-                    )}
-                  </div>
+      <PageHeader
+        eyebrow="Personal Projects"
+        title="Built for the sake of building."
+        subtitle="Things that started as curiosity and ended up in production, or close enough."
+      />
+      <div className="px-10 py-10 max-w-3xl space-y-5">
+        {projects.map((p, i) => (
+          <FadeIn key={p.title} delay={i * 0.07}>
+            <div className={`rounded-xl p-7 border transition-all duration-200 hover:bg-[#1c2035] ${
+              p.featured
+                ? 'bg-night3 border-l-[3px] border-gold'
+                : 'bg-night3 border-rule hover:border-[rgba(212,175,97,0.3)]'
+            }`}>
+              <div className="flex items-start justify-between gap-4 mb-1">
+                <div>
+                  <h3 className="font-serif text-[1.1rem] font-bold text-paper">{p.title}</h3>
+                  <p className="text-[0.78rem] text-gold font-mono mt-0.5">{p.tagline}</p>
                 </div>
-                <p className="text-[0.875rem] text-[#2c2c2c] leading-relaxed mb-4">{desc}</p>
+                {p.featured && (
+                  <span className="flex-shrink-0 font-mono text-[0.6rem] text-gold bg-[rgba(212,175,97,0.1)] border border-[rgba(212,175,97,0.25)] px-2 py-0.5 rounded uppercase tracking-widest">
+                    Live
+                  </span>
+                )}
+              </div>
+              <p className="text-[0.875rem] text-papersoft leading-[1.75] my-4">{p.desc}</p>
+              <div className="flex items-center justify-between flex-wrap gap-3">
                 <div className="flex flex-wrap gap-1.5">
-                  {tags.map(t => <span key={t} className="tag">{t}</span>)}
+                  {p.tags.map(t => <span key={t} className="tag">{t}</span>)}
                 </div>
-              </motion.div>
-            </FadeIn>
-          ))}
-        </div>
+                <div className="flex gap-2">
+                  {p.live && (
+                    <a href={p.live} target="_blank" rel="noopener noreferrer"
+                       className="flex items-center gap-1.5 text-[0.75rem] font-mono text-gold border border-[rgba(212,175,97,0.3)] px-2.5 py-1 rounded hover:bg-[rgba(212,175,97,0.08)] transition-colors">
+                      <ExternalLink size={12} /> Visit
+                    </a>
+                  )}
+                  {p.github && (
+                    <a href={p.github} target="_blank" rel="noopener noreferrer"
+                       className="flex items-center gap-1.5 text-[0.75rem] font-mono text-muted border border-rule px-2.5 py-1 rounded hover:border-[rgba(212,175,97,0.3)] hover:text-papersoft transition-colors">
+                      <Github size={12} /> GitHub
+                    </a>
+                  )}
+                </div>
+              </div>
+            </div>
+          </FadeIn>
+        ))}
       </div>
     </div>
   )

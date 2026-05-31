@@ -2,49 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    background-color: #f9f7f2;
-    color: #2c2c2c;
-    font-family: 'Inter', system-ui, sans-serif;
-    -webkit-font-smoothing: antialiased;
-  }
+html { scroll-behavior: smooth; }
+
+body {
+  background: #090b12;
+  color: #ece7dc;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
+::selection { background: #d4af61; color: #090b12; }
+
+/* Night sky fixed background */
+.skybg {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background:
+    radial-gradient(1200px 700px at 75% -5%, rgba(212,175,97,0.08), transparent 60%),
+    radial-gradient(900px 600px at 8% 10%, rgba(189,76,95,0.07), transparent 55%),
+    linear-gradient(180deg, #0b0e17 0%, #090b12 40%, #07080e 100%);
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: var(--o, 0.5); }
+  50% { opacity: calc(var(--o, 0.5) * 0.22); }
+}
+
+/* ---- component helpers ---- */
 @layer components {
   .tag {
-    @apply inline-block bg-[#ede9e0] text-[#555] text-[0.7rem] font-mono px-2 py-0.5 rounded border border-[#e8e4da];
+    @apply inline-block bg-[rgba(236,231,220,0.06)] text-muted text-[0.68rem] font-mono px-2 py-0.5 rounded border border-rule;
   }
   .tag-accent {
-    @apply inline-block bg-[rgba(201,76,38,0.08)] text-accent text-[0.7rem] font-mono px-2 py-0.5 rounded border border-[rgba(201,76,38,0.2)];
+    @apply inline-block bg-[rgba(212,175,97,0.1)] text-gold text-[0.68rem] font-mono px-2 py-0.5 rounded border border-[rgba(212,175,97,0.25)];
   }
   .card {
-    @apply bg-white border border-[#e8e4da] rounded-lg p-7 transition-all duration-200 hover:border-[#c8bfb0] hover:shadow-sm;
+    @apply bg-night3 border border-rule rounded-lg p-7 transition-all duration-200 hover:border-[rgba(212,175,97,0.25)] hover:bg-[#1c2035];
   }
   .section-title {
-    @apply font-serif text-2xl font-bold text-[#111] mb-1;
+    @apply font-serif text-2xl font-bold text-paper mb-1;
   }
   .section-title::after {
     content: '';
     display: block;
-    width: 36px;
-    height: 3px;
-    background: #c94c26;
-    margin-top: 8px;
+    width: 2rem;
+    height: 2px;
+    background: #d4af61;
+    margin-top: 0.4rem;
+    border-radius: 1px;
   }
   .tl-bullet {
-    @apply text-sm text-[#2c2c2c] leading-relaxed pl-4 relative;
+    @apply text-sm text-papersoft leading-relaxed pl-4 relative;
   }
   .tl-bullet::before {
     content: '';
     position: absolute;
     left: 0;
-    top: 10px;
+    top: 0.45em;
     width: 5px;
     height: 5px;
     border-radius: 50%;
-    background: #c94c26;
+    background: #d4af61;
   }
 }

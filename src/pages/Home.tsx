@@ -4,20 +4,22 @@ import { useEffect, useRef, useState } from 'react'
 import { ArrowRight, BookOpen, Zap, Briefcase, User, FileText, Mail } from 'lucide-react'
 import FadeIn from '../components/FadeIn'
 
+const EASE = [0.22, 1, 0.36, 1] as const
+
 const stats = [
-  { value: 10, suffix: '+', label: 'Enterprise clients served at FBK' },
-  { value: 3, suffix: '', label: 'Production platforms shipped' },
+  { value: 10,  suffix: '+',  label: 'Enterprise clients served at FBK' },
+  { value: 3,   suffix: '',   label: 'Production platforms shipped' },
   { value: 251, suffix: 'K+', label: 'SAP event logs in IMP dataset' },
   { value: 200, suffix: 'K+', label: 'Records analysed at IRI' },
 ]
 
 const quickLinks = [
-  { label: 'Academic Projects', desc: 'IMP, HuggingFace Framework, PITAS and other research-backed builds', to: '/projects/academic', icon: BookOpen },
+  { label: 'Academic Projects', desc: 'IMP, HuggingFace Framework, PITAS and other research-backed builds',        to: '/projects/academic', icon: BookOpen },
   { label: 'Personal Projects', desc: 'Loadedout, Weave, Pitwall and other things built for the sake of building', to: '/projects/personal', icon: Zap },
-  { label: 'Experience', desc: 'FBK Milan, IRI HSG, Teaching Assistant, Bocconi and HSG education', to: '/experience', icon: Briefcase },
-  { label: 'About', desc: 'Who I am, what drives me, and why the enterprise plus AI intersection matters', to: '/about', icon: User },
-  { label: 'Articles', desc: 'Writing on AI, enterprise software, and whatever else is worth articulating', to: '/articles', icon: FileText },
-  { label: 'Get in Touch', desc: 'salman.ranjha@outlook.com · Based in St. Gallen, Switzerland', to: 'mailto:salman.ranjha@outlook.com', icon: Mail, external: true },
+  { label: 'Experience',        desc: 'FBK Milan, IRI HSG, Teaching Assistant, Bocconi and HSG education',          to: '/experience',        icon: Briefcase },
+  { label: 'About',             desc: 'Who I am, what drives me, and why the enterprise plus AI intersection matters', to: '/about',            icon: User },
+  { label: 'Articles',          desc: 'Writing on AI, enterprise software, and whatever else is worth articulating', to: '/articles',          icon: FileText },
+  { label: 'Get in Touch',      desc: 'salman.ranjha@outlook.com · Based in St. Gallen, Switzerland',               to: 'mailto:salman.ranjha@outlook.com', icon: Mail, external: true },
 ]
 
 function Counter({ target, suffix }: { target: number; suffix: string }) {
@@ -47,42 +49,69 @@ function Counter({ target, suffix }: { target: number; suffix: string }) {
   return <span ref={ref}>{count}{suffix}</span>
 }
 
+function StarField() {
+  const pts = [
+    { x: '82%', y: '18%', s: 5, d: 3.2 },
+    { x: '91%', y: '42%', s: 3, d: 4.5 },
+    { x: '74%', y: '62%', s: 4, d: 5.1 },
+    { x: '88%', y: '72%', s: 3, d: 3.7 },
+  ]
+  return (
+    <div className="pointer-events-none absolute inset-0 hidden md:block overflow-hidden" aria-hidden="true">
+      {pts.map((p, i) => (
+        <motion.div
+          key={i}
+          className="absolute text-gold"
+          style={{ left: p.x, top: p.y }}
+          animate={{ opacity: [0.25, 0.7, 0.25] }}
+          transition={{ duration: p.d, repeat: Infinity, ease: 'easeInOut', delay: i * 0.6 }}
+        >
+          <svg width={p.s} height={p.s} viewBox="0 0 24 24">
+            <path d="M12 0.5L13.7 10.3L23.5 12L13.7 13.7L12 23.5L10.3 13.7L0.5 12L10.3 10.3Z" fill="currentColor" />
+          </svg>
+        </motion.div>
+      ))}
+    </div>
+  )
+}
+
 export default function Home() {
   return (
     <div>
       {/* Hero */}
-      <div className="px-10 pt-14 pb-10 border-b border-border bg-white">
-        <div className="flex items-start gap-10 max-w-2xl">
+      <div className="relative px-10 pt-14 pb-10 border-b border-rule overflow-hidden">
+        <StarField />
+        <div className="flex items-start gap-10 max-w-2xl relative">
           <motion.img
             initial={{ opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.4 }}
+            transition={{ duration: 0.5, ease: EASE }}
             src="/image/profile.png"
             alt="Salman Ranjha"
-            className="w-[110px] h-[110px] rounded-full object-cover border-2 border-border flex-shrink-0 shadow-sm"
+            className="w-[110px] h-[110px] rounded-full object-cover border border-rule flex-shrink-0"
           />
           <div>
             <motion.p
-              initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }}
-              className="font-mono text-[0.7rem] text-accent uppercase tracking-widest mb-2"
+              initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35, ease: EASE }}
+              className="font-mono text-[0.68rem] text-gold uppercase tracking-widest mb-2"
             >
               salmanranjha.me
             </motion.p>
             <motion.h1
-              initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35, delay: 0.05 }}
-              className="font-serif text-[2rem] font-bold text-[#111] leading-tight mb-2"
+              initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45, delay: 0.06, ease: EASE }}
+              className="font-serif text-[2.1rem] font-bold text-paper leading-tight mb-2"
             >
               Salman Ranjha
             </motion.h1>
             <motion.p
-              initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35, delay: 0.1 }}
-              className="text-[0.95rem] text-text-muted mb-4"
+              initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.12, ease: EASE }}
+              className="text-[0.95rem] text-muted mb-4"
             >
               Enterprise delivery experience meets hands-on agentic AI development.
             </motion.p>
             <motion.p
-              initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.35, delay: 0.15 }}
-              className="text-[0.875rem] text-[#2c2c2c] leading-relaxed max-w-[480px]"
+              initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.18, ease: EASE }}
+              className="text-[0.875rem] text-papersoft leading-relaxed max-w-[480px]"
             >
               Two and a half years building enterprise software for J&amp;J, Abbott and Stryker at FBK
               in Milan, then an MSc at HSG where the focus shifted to building agentic AI systems.
@@ -98,11 +127,11 @@ export default function Home() {
         <FadeIn>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
             {stats.map(s => (
-              <div key={s.label} className="bg-white border border-border rounded-lg p-5">
-                <div className="font-serif text-[1.65rem] font-bold text-accent leading-none mb-1.5">
+              <div key={s.label} className="bg-night3 border border-rule rounded-lg p-5 hover:border-[rgba(212,175,97,0.25)] transition-colors">
+                <div className="font-serif text-[1.65rem] font-bold text-gold leading-none mb-1.5">
                   <Counter target={s.value} suffix={s.suffix} />
                 </div>
-                <div className="text-[0.7rem] text-text-muted leading-snug">{s.label}</div>
+                <div className="text-[0.68rem] text-muted leading-snug">{s.label}</div>
               </div>
             ))}
           </div>
@@ -110,27 +139,27 @@ export default function Home() {
 
         {/* Explore */}
         <FadeIn delay={0.1}>
-          <h2 className="section-title mb-8">Explore</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+          <h2 className="font-serif text-[1.25rem] font-bold text-paper mb-2 pb-2 border-b border-rule inline-block pr-8">Explore</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3.5 mt-6">
             {quickLinks.map(({ label, desc, to, icon: Icon, external }) => (
               external
                 ? (
                   <a key={label} href={to}
-                    className="bg-white border border-border rounded-lg p-6 flex flex-col gap-2.5 group transition-all duration-200 hover:border-accent hover:shadow-sm cursor-pointer">
+                    className="bg-night3 border border-rule rounded-lg p-6 flex flex-col gap-2.5 group transition-all duration-200 hover:border-[rgba(212,175,97,0.3)] hover:bg-[#1c2035] cursor-pointer">
                     <div className="flex items-center justify-between">
-                      <span className="font-semibold text-[0.9rem] text-[#111]">{label}</span>
-                      <ArrowRight size={14} className="text-text-muted group-hover:text-accent transition-colors" />
+                      <span className="font-semibold text-[0.88rem] text-paper">{label}</span>
+                      <ArrowRight size={13} className="text-muted group-hover:text-gold transition-colors" />
                     </div>
-                    <p className="text-[0.8rem] text-text-muted leading-relaxed">{desc}</p>
+                    <p className="text-[0.78rem] text-muted leading-relaxed">{desc}</p>
                   </a>
                 ) : (
                   <Link key={label} to={to}
-                    className="bg-white border border-border rounded-lg p-6 flex flex-col gap-2.5 group transition-all duration-200 hover:border-accent hover:shadow-sm">
+                    className="bg-night3 border border-rule rounded-lg p-6 flex flex-col gap-2.5 group transition-all duration-200 hover:border-[rgba(212,175,97,0.3)] hover:bg-[#1c2035]">
                     <div className="flex items-center justify-between">
-                      <span className="font-semibold text-[0.9rem] text-[#111]">{label}</span>
-                      <ArrowRight size={14} className="text-text-muted group-hover:text-accent transition-colors" />
+                      <span className="font-semibold text-[0.88rem] text-paper">{label}</span>
+                      <ArrowRight size={13} className="text-muted group-hover:text-gold transition-colors" />
                     </div>
-                    <p className="text-[0.8rem] text-text-muted leading-relaxed">{desc}</p>
+                    <p className="text-[0.78rem] text-muted leading-relaxed">{desc}</p>
                   </Link>
                 )
             ))}

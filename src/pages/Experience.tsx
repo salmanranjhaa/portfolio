@@ -1,138 +1,140 @@
 import { motion } from 'framer-motion'
-import PageHeader from '../components/PageHeader'
 import FadeIn from '../components/FadeIn'
+import PageHeader from '../components/PageHeader'
 
 const jobs = [
   {
-    period: 'Feb 2025 – Present',
-    location: 'St. Gallen, Switzerland',
-    role: 'Teaching Assistant, Fundamentals of Computer Science',
-    company: 'University of St. Gallen',
-    context: null,
+    role: 'Teaching Assistant, CS Fundamentals',
+    org: 'University of St. Gallen',
+    period: '2025 · Ongoing',
     bullets: [
-      'Run weekly sessions for 40 to 50 students covering assignment reviews, exam preparation, and end-to-end project delivery; evaluate team projects across code quality, system design, and presentation across full semester delivery cycles.',
+      'Teaching Python and core CS concepts to 40-50 students per semester.',
+      'Running exercise sessions, grading, and office hours for the introductory programming course.',
     ],
   },
   {
-    period: 'Sep 2024 – Mar 2026',
-    location: 'St. Gallen, Switzerland',
     role: 'Research Assistant',
-    company: 'Institute of Responsible Innovation, University of St. Gallen',
-    context: null,
+    org: 'Institute of Responsible Innovation, HSG',
+    period: '2024 · Ongoing',
     bullets: [
-      'Analysed behavioural patterns across 200,000+ entrepreneurial records using transformer-based NLP classification (BERT, DeBERTa) and linguistic metrics (semantic density, Cohen\'s kappa), validating model output against human-labelled subsets.',
-      'Built multimodal data pipelines processing Kickstarter content (video, audio, text) at scale, ran comparative benchmarks across LLM providers (OpenAI, Gemini, DeepSeek) on accuracy, cost, and latency, and translated findings into insights for non-technical research stakeholders.',
+      'Building large-scale data pipelines across 200,000+ Kickstarter projects for entrepreneurship research.',
+      'Audio transcription using Whisper Large v3 on GCP GPU instances, creator biography classification via two-stage NLI pipeline.',
+      'Validated classification models against human-labelled subsets using Cohen\'s kappa.',
     ],
   },
   {
-    period: 'Apr 2022 – Oct 2024',
-    location: 'Milan, Italy',
     role: 'Technical Business Analyst',
-    company: 'FBK S.r.l.',
-    context: 'Tender management SaaS for life sciences multinationals including Johnson & Johnson, Abbott, and Stryker, operating across 30+ countries under SOC 2 Type II certification.',
+    org: 'FBK S.r.l., Milan',
+    period: '2021 · 2024',
     bullets: [
-      'Served as single point of contact across a portfolio of 10+ enterprise clients, with primary ownership of the J&J engagement end to end from BA to IT Director level, aligning senior management on both sides for decisions in the EUR 300k+ tier across bimonthly release cycles.',
-      'Led the data ingestion feature from client discovery through productization, replacing manual one-off migrations with automated XML-based dossier creation, archive routing, and live status handling across J&J and other multinationals, generating EUR 200k+ in subsequent deal value.',
-      'Led the price control engine update, implementing manufacturing cost encryption and minimum price compliance rules for markets where selling below manufacturing cost is legally prohibited, deployed across multiple enterprise clients.',
-      'Ran technical feasibility for API integrations with SAP and JD Edwards ERP systems, validated SAP ECC to S/4HANA endpoint migration, and built Tableau dashboards consolidating multi-country tender data into a management view with role-based access.',
-      'Produced structured delivery artifacts across all accounts: functional analyses, architecture documentation, user stories and test scripts in Azure DevOps, user guides, and training material, driving work through QA, UAT, deployment, and Hypercare.',
+      'Served 10+ enterprise clients across pharma and medtech, with Johnson & Johnson as primary account from Business Analyst to IT Director engagement.',
+      'Led EUR 200k+ deal closures and managed project streams worth EUR 300k+ for J&J alone.',
+      'Delivered SAP and JD Edwards ERP implementations including custom integrations, data migration, and cross-system workflows.',
+      'Identified and escalated a pricing control mechanism being used to circumvent legally prohibited below-cost selling; implementation was halted.',
+      'Produced full delivery artefacts: functional analyses, Azure DevOps backlogs, UAT scripts, and hypercare documentation.',
     ],
   },
 ]
 
 const education = [
   {
-    period: 'Sep 2024 – Present',
-    degree: 'MSc Computer Science, Data Science & AI',
-    school: 'University of St. Gallen (HSG), Switzerland',
-    detail: 'Machine Learning, Deep Learning, NLP with LLMs, Advanced Databases, Software Systems Engineering, Information Theory, Marketing Analytics, User Centred Design (HCI). Integrated Master\'s Project (12 ECTS) at the Interactions Lab supervised by Prof. Andrei Ciortea.',
+    degree: 'MSc in Computer Science, Data Science & AI',
+    school: 'University of St. Gallen (HSG)',
+    period: '2024 · 2026',
+    note: 'Integrated Master\'s Project: Trustworthy Agentic AI for SAP P2P Workflows',
   },
   {
-    period: 'Sep 2018 – May 2021',
-    degree: 'BSc Economics, Management & Computer Science',
-    school: 'Bocconi University, Milan, Italy',
-    detail: 'Machine Learning, Big Data and Databases, Econometrics, Computer Programming. Trilingual university environment across Italian, English, and international curriculum.',
+    degree: 'BSc in Economics, Management and Computer Science',
+    school: 'Bocconi University, Milan',
+    period: '2018 · 2021',
+    note: 'Focus on quantitative methods, corporate finance, and software fundamentals',
   },
 ]
 
-const competencies = [
-  { name: 'Enterprise Delivery', level: 'Professional — FBK, 2.5 years', detail: 'SAP and JD Edwards integration, Procure to Pay and Order to Cash workflows, SaaS delivery lifecycle, UAT and Hypercare, Azure DevOps, SOC 2 compliance' },
-  { name: 'AI Engineering', level: 'Advanced — MSc coursework and personal projects', detail: 'Agentic AI (BDI, JaCaMo, NeMo Guardrails), RAG, ReACT, NLP, LLMs, Transformers (BERT, DeBERTa), Process Mining, Few-Shot Learning' },
-  { name: 'Data Engineering', level: 'Advanced — IRI research and personal projects', detail: 'ETL Pipelines, Distributed Processing (Dask), Web Scraping, API Integration, GCP, Azure, multimodal pipelines' },
-  { name: 'Visualisation', level: 'Proficient — FBK and research', detail: 'Tableau, PowerBI, Plotly' },
-]
-
-const toolGroups = [
-  { label: 'Programming', items: ['Python', 'R', 'SQL', 'Java', 'JavaScript', 'TypeScript'] },
-  { label: 'ML & AI Stack', items: ['HuggingFace', 'Vertex AI', 'LightGBM', 'Groq', 'OpenAI API'] },
-  { label: 'Databases', items: ['PostgreSQL', 'Neo4j', 'ChromaDB', 'MongoDB', 'SQLite'] },
-  { label: 'Infrastructure', items: ['GCP', 'Docker', 'FastAPI', 'GitHub Actions', 'Azure DevOps'] },
+const skills = [
+  {
+    heading: 'Applied Competencies',
+    groups: [
+      { name: 'Agentic AI Systems', tags: ['ReACT Agents', 'BDI Architectures', 'NeMo Guardrails', 'MCP', 'RAG'] },
+      { name: 'Enterprise Software', tags: ['SAP ERP', 'JD Edwards', 'ERP Integration', 'Process Mining', 'Azure DevOps'] },
+      { name: 'Data & ML', tags: ['NLP', 'Transformer Models', 'ETL Pipelines', 'Whisper', 'DeBERTa', 'BART'] },
+      { name: 'Delivery & Analysis', tags: ['Functional Analysis', 'UAT Design', 'Stakeholder Management', 'Technical Documentation'] },
+    ],
+  },
+  {
+    heading: 'Tools & Technologies',
+    groups: [
+      { name: 'Languages', tags: ['Python', 'TypeScript', 'SQL', 'LaTeX'] },
+      { name: 'Frameworks', tags: ['FastAPI', 'React', 'Vite', 'Tailwind CSS', 'Framer Motion'] },
+      { name: 'Infrastructure', tags: ['GCP', 'Docker', 'PostgreSQL', 'Neo4j', 'ChromaDB', 'nginx'] },
+      { name: 'AI / ML', tags: ['HuggingFace', 'Vertex AI', 'Groq', 'LangChain', 'W3C WoT'] },
+    ],
+  },
 ]
 
 export default function Experience() {
   return (
     <div>
-      <PageHeader eyebrow="Experience & Education" title="Where the work happened." subtitle="Enterprise software delivery, AI research, teaching, and the academic foundations underneath all of it." />
-      <div className="px-10 py-10 max-w-3xl">
+      <PageHeader
+        eyebrow="Experience"
+        title="Where the work happened."
+        subtitle="Enterprise software delivery, academic research, and teaching — across Milan and St. Gallen."
+      />
+      <div className="px-10 py-10 max-w-3xl space-y-14">
 
-        <h2 className="section-title mb-8">Professional Experience</h2>
-        <div className="flex flex-col gap-6 mb-14">
-          {jobs.map(({ period, location, role, company, context, bullets }) => (
-            <FadeIn key={role}>
-              <div className="grid grid-cols-[140px_1fr] gap-5">
-                <div className="pt-0.5">
-                  <div className="font-mono text-[0.7rem] text-accent leading-snug mb-1">{period}</div>
-                  <div className="font-mono text-[0.68rem] text-text-muted">{location}</div>
-                </div>
-                <motion.div whileHover={{ x: 2 }} className="bg-white border border-border rounded-lg p-6">
-                  <div className="font-semibold text-[0.95rem] text-[#111] mb-0.5">{role}</div>
-                  <div className="text-[0.82rem] text-accent font-medium mb-3">{company}</div>
-                  {context && <p className="text-[0.78rem] text-text-muted italic mb-4 leading-relaxed">{context}</p>}
-                  <ul className="flex flex-col gap-2.5">
-                    {bullets.map((b, i) => <li key={i} className="tl-bullet">{b}</li>)}
-                  </ul>
-                </motion.div>
-              </div>
-            </FadeIn>
-          ))}
-        </div>
-
-        <h2 className="section-title mb-8">Education</h2>
+        {/* Timeline */}
         <FadeIn>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5 mb-14">
-            {education.map(({ period, degree, school, detail }) => (
-              <div key={degree} className="bg-white border border-border rounded-lg p-6">
-                <div className="font-mono text-[0.7rem] text-accent mb-2">{period}</div>
-                <div className="font-semibold text-[0.92rem] text-[#111] mb-1">{degree}</div>
-                <div className="text-[0.82rem] text-accent mb-3">{school}</div>
-                <div className="text-[0.8rem] text-text-muted leading-relaxed">{detail}</div>
+          <h2 className="section-title mb-8">Work</h2>
+          <div className="space-y-5">
+            {jobs.map(({ role, org, period, bullets }) => (
+              <motion.div key={role} whileHover={{ x: 2 }} className="bg-night3 border border-rule rounded-lg p-6 hover:border-[rgba(212,175,97,0.25)] transition-colors">
+                <div className="flex items-start justify-between gap-4 mb-3">
+                  <div>
+                    <div className="font-semibold text-[0.95rem] text-paper mb-0.5">{role}</div>
+                    <div className="font-mono text-[0.7rem] text-gold">{org}</div>
+                  </div>
+                  <span className="font-mono text-[0.68rem] text-muted flex-shrink-0 pt-0.5">{period}</span>
+                </div>
+                <ul className="space-y-1.5">
+                  {bullets.map((b, i) => <li key={i} className="tl-bullet">{b}</li>)}
+                </ul>
+              </motion.div>
+            ))}
+          </div>
+        </FadeIn>
+
+        {/* Education */}
+        <FadeIn delay={0.08}>
+          <h2 className="section-title mb-8">Education</h2>
+          <div className="grid md:grid-cols-2 gap-4">
+            {education.map(({ degree, school, period, note }) => (
+              <div key={degree} className="bg-night3 border border-rule rounded-lg p-6 hover:border-[rgba(212,175,97,0.25)] transition-colors">
+                <div className="font-mono text-[0.65rem] text-gold uppercase tracking-wide mb-2">{period}</div>
+                <div className="font-semibold text-[0.92rem] text-paper mb-1">{degree}</div>
+                <div className="text-[0.8rem] text-muted mb-2">{school}</div>
+                <div className="text-[0.78rem] text-papersoft italic leading-snug">{note}</div>
               </div>
             ))}
           </div>
         </FadeIn>
 
-        <h2 className="section-title mb-8">Skills</h2>
-        <FadeIn>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-            {competencies.map(({ name, level, detail }) => (
-              <div key={name} className="bg-white border border-border rounded-lg p-5">
-                <div className="font-semibold text-[0.88rem] text-[#111] mb-0.5">{name}</div>
-                <div className="font-mono text-[0.68rem] text-accent mb-2">{level}</div>
-                <div className="text-[0.8rem] text-text-muted leading-relaxed">{detail}</div>
-              </div>
-            ))}
-          </div>
-          <div className="flex flex-col gap-4">
-            {toolGroups.map(({ label, items }) => (
-              <div key={label}>
-                <div className="font-mono text-[0.7rem] text-text-muted uppercase tracking-widest mb-2">{label}</div>
-                <div className="flex flex-wrap gap-1.5">
-                  {items.map(i => <span key={i} className="tag">{i}</span>)}
+        {/* Skills */}
+        {skills.map(({ heading, groups }, si) => (
+          <FadeIn key={heading} delay={0.1 + si * 0.05}>
+            <h2 className="section-title mb-8">{heading}</h2>
+            <div className="grid md:grid-cols-2 gap-4">
+              {groups.map(({ name, tags }) => (
+                <div key={name} className="bg-night3 border border-rule rounded-lg p-5 hover:border-[rgba(212,175,97,0.25)] transition-colors">
+                  <div className="font-semibold text-[0.82rem] text-paper mb-3">{name}</div>
+                  <div className="flex flex-wrap gap-1.5">
+                    {tags.map(t => <span key={t} className="tag">{t}</span>)}
+                  </div>
                 </div>
-              </div>
-            ))}
-          </div>
-        </FadeIn>
+              ))}
+            </div>
+          </FadeIn>
+        ))}
+
       </div>
     </div>
   )
