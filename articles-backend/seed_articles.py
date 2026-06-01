@@ -193,9 +193,9 @@ He called it "agent-assisted development at its most practical: solve exactly yo
 
 That framing matters. It is not a product. It is not a portfolio piece. It is a tool built for a specific moment by someone who knew exactly what they needed. The distinction between that and vibe-coding your way to a messy prototype is entirely about intentionality.
 
-The more interesting part is what happened before the presentations began. Claude had already reviewed all 28 code submissions. That analysis, reviewed and adjusted by humans, surfaced as a summary card when judges opened a team's scoring panel. The jury saw the technical picture, then evaluated the pitch independently. AI handling the analytical grunt work, humans making the judgment calls.
+The more interesting part is what happened before the presentations began. Claude had already reviewed all 28 code submissions — a technical analysis that would have been impossible to do manually at depth across that many projects in the time available. That analysis, reviewed and adjusted by humans, surfaced as a summary card when judges opened a team's scoring panel. The jury then entered their own scores manually. AI providing the context, humans making the judgment calls.
 
-A student called AI grading "utterly disgraceful and extremely unfair." The concern was real. Finger's response was not defensive. He walked through the design: AI in the first round served the jury, not replaced it. 75% of jury time was spent reviewing Claude's analysis, understanding it, pushing back on it. In the second round, votes were entirely human. That is a system built by someone who had thought carefully about where the line belongs.
+A comment in the thread raised the concern that using AI in the evaluation process was unfair to participants who had worked through the night. The concern was real. Finger's response was not defensive. He was explicit about what AI actually did and what it did not: 75% of jury time was spent reviewing Claude's analysis, understanding it, pushing back on it. The scoring itself was entirely human. That is a system built by someone who had thought carefully about where the line belongs.
 
 ## The Right Question
 
