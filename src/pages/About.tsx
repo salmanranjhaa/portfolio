@@ -32,14 +32,6 @@ export default function About() {
           </p>
         </FadeIn>
 
-        <FadeIn delay={0.13}>
-          <blockquote className="border-l-[2px] border-gold pl-6 py-2 my-2">
-            <p className="font-serif text-[1.05rem] text-paper leading-relaxed italic">
-              "The interesting problems live at the intersection of what these systems can do and what it actually means to trust them in environments where the cost of being wrong is real."
-            </p>
-          </blockquote>
-        </FadeIn>
-
         <FadeIn delay={0.16}>
           <p className="text-[0.95rem] text-papersoft leading-[1.8]">
             I started the MSc at HSG at exactly the moment AI became impossible to ignore. My bachelor's was largely pre-ChatGPT: you learned to code, you learned to think computationally, friction was real and deliberate. By the time I was in St. Gallen, that friction had collapsed. Courses that should have taken a week took an afternoon. Projects that would have required a team ran from a single terminal. And I kept coming back to the same question: is my masters genuinely more manageable, or am I just better at outsourcing the hard parts? That question turned into something more serious. I started paying attention to where AI actually fails, what it confidently gets wrong, and what the right mental model is for someone building with it rather than just using it. Not scepticism, but precision about what trust actually requires.
