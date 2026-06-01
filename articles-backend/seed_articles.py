@@ -226,9 +226,9 @@ def main():
         conn.commit()
     print("Done.")
 
-if __name__ == "__main__":
-    main()
 
+# Additional articles are appended after main() is defined. They must be registered
+# before main() runs, so the __main__ guard lives at the end of the file (below).
 ARTICLES.append({
     "id": str(uuid.uuid4()),
     "title": "I Got Frustrated and Built an App. Then My Sister Sent Me an Excel File.",
@@ -270,3 +270,7 @@ Neither of these projects is technically the most impressive thing I have built.
 Both of them did. That is a higher bar than it sounds.
 """,
 })
+
+
+if __name__ == "__main__":
+    main()
