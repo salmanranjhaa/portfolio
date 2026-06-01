@@ -228,3 +228,45 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+ARTICLES.append({
+    "id": str(uuid.uuid4()),
+    "title": "I Got Frustrated and Built an App. Then My Sister Sent Me an Excel File.",
+    "excerpt": "Two personal projects, two real users, and the cleanest argument for just building the thing yourself.",
+    "published_at": ts(2025, 6, 15),
+    "body": """\
+There is a specific kind of frustration that comes from opening an app that is supposed to help you and immediately being asked to fill out a form about your goals, your body type, your activity level, your dietary philosophy, and whether you would like to receive motivational notifications.
+
+I do not want motivational notifications. I want to log that I did a workout and move on with my day.
+
+I was in my second semester at HSG, teaching two days a week, doing research two others, trying to train consistently, cook reasonable food, and not lose track of what was happening when. Every fitness app I tried either wanted too much from me upfront or gave me too much back. Dashboards built for people whose primary hobby is tracking themselves. I am not that person. I just needed something that remembered what I did yesterday so I could do slightly more today.
+
+So I built [Loadedout](https://loadedout.online).
+
+FastAPI backend, Vertex AI for the coaching layer, Google Calendar sync so my training blocks actually live where my schedule lives. The AI coaching piece is not decorative — it reads your recent history and tells you something specific, not generic. It does not tell you to stay hydrated. It notices that you have skipped legs three weeks in a row and says so.
+
+The part I did not expect was how much I would actually use it. I have built things before that I stopped using within a month because the friction of maintaining them exceeded the value they returned. Loadedout is the opposite. I open it every day. It has become load-bearing. That feedback loop — building something, using it, noticing what is wrong, fixing it — is a different kind of learning than any project I have submitted for a grade.
+
+---
+
+A few months later my sister sent me an Excel file.
+
+It was a list of GRE vocabulary words she needed to memorise before an exam. Hundreds of them. The message with it was essentially: can you put these in a Word document in a nicer format?
+
+I could have done that in twenty minutes. Instead I spent a weekend building her an app.
+
+[GRE Prep Station](https://github.com/salmanranjhaa/GRE_prep_studio) has flashcard mode, a quiz mode, AI-generated definitions and mnemonics via Groq, semantic grading so it evaluates whether you actually understood a word rather than just pattern-matched the dictionary definition, and a progress tracker so she could see what was sticking and what was not. Admin panel so I could add new word sets. Deployed on GCP with Docker Compose.
+
+She did not ask for any of that. She asked for a Word document.
+
+But I knew the actual problem. She did not need a nicer list. She needed a way to study that would make the words stay. The Excel file was the stated requirement. Learning the words was the real one.
+
+This is the thing about building for someone you know: you cannot hide behind the spec. You know what they actually need and you either build for that or you do not. There is no ambiguity to retreat into.
+
+---
+
+Neither of these projects is technically the most impressive thing I have built. The distributed systems work for PITAS was more complex. The IMP research involves harder problems. But Loadedout and GRE Prep are the ones I find myself talking about most naturally, because the motivation is self-evident. You do not have to explain why someone would want to track their workouts or why a student needs to learn vocabulary. The problem is obvious. The only interesting question is whether you built something that actually solves it.
+
+Both of them did. That is a higher bar than it sounds.
+""",
+})
