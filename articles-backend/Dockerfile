@@ -5,8 +5,7 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY main.py .
-COPY seed_articles.py .
+COPY main.py seed_articles.py update_images.py ./
 
 ENV ADMIN_PASSWORD=changeme
 ENV JWT_SECRET=change-this-in-production

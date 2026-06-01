@@ -5,10 +5,6 @@ interface Article { id: string; title: string; body: string; published_at: strin
 
 const API_BASE = window.location.origin.includes('localhost') ? 'http://localhost:8001' : '/api'
 
-function formatDate(iso: string) {
-  return new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
-}
-
 function renderMd(md: string): string {
   return md
     .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<figure class="my-8"><img src="$2" alt="$1" class="w-full rounded-lg border border-rule object-cover max-h-80" /><figcaption class="text-center font-mono text-[0.65rem] text-muted mt-2">$1</figcaption></figure>')
@@ -47,9 +43,11 @@ export default function ArticleReader() {
       {article && (
         <article>
           <h1 className="font-serif text-[1.9rem] font-bold text-paper leading-tight mb-4">{article.title}</h1>
-          <div className="font-mono text-[0.7rem] text-muted mb-10">
-            {formatDate(article.published_at)}{article.reading_time ? ` · ${article.reading_time} min read` : ''}
-          </div>
+          {article.reading_time ? (
+            <div className="font-mono text-[0.7rem] text-muted mb-10">
+              {article.reading_time} min read
+            </div>
+          ) : <div className="mb-10" />}
           <div
             className="text-[0.94rem] text-papersoft leading-[1.85] space-y-4"
             dangerouslySetInnerHTML={{ __html: `<p class="mb-4">${renderMd(article.body)}</p>` }}

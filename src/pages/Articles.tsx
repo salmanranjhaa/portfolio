@@ -8,10 +8,6 @@ interface Article { id: string; title: string; excerpt?: string; published_at: s
 
 const API_BASE = window.location.origin.includes('localhost') ? 'http://localhost:8001' : '/api'
 
-function formatDate(iso: string) {
-  return new Date(iso).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
-}
-
 export default function Articles() {
   const [articles, setArticles] = useState<Article[]>([])
   const [loading, setLoading] = useState(true)
@@ -44,9 +40,9 @@ export default function Articles() {
                 <div className="flex-1 min-w-0">
                   <div className="font-semibold text-[0.9rem] text-paper mb-1 group-hover:text-gold transition-colors">{a.title}</div>
                   {a.excerpt && <p className="text-[0.78rem] text-muted leading-relaxed line-clamp-2">{a.excerpt}</p>}
-                  <div className="font-mono text-[0.65rem] text-muted mt-2">
-                    {formatDate(a.published_at)}{a.reading_time ? ` · ${a.reading_time} min read` : ''}
-                  </div>
+                  {a.reading_time ? (
+                    <div className="font-mono text-[0.65rem] text-muted mt-2">{a.reading_time} min read</div>
+                  ) : null}
                 </div>
                 <ArrowRight size={14} className="text-muted group-hover:text-gold transition-colors flex-shrink-0 mt-1" />
               </Link>
