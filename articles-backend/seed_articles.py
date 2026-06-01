@@ -17,7 +17,7 @@ ARTICLES = [
         "excerpt": "Dr. Abdus Salam was Pakistan's only Nobel laureate in science. The state erased him anyway. On the intersection of religious nationalism, scientific genius, and the price of ideological conformity.",
         "published_at": ts(2025, 5, 10),
         "body": """\
-![Dr. Abdus Salam, Pakistan's first Nobel laureate in science](https://upload.wikimedia.org/wikipedia/commons/thumb/f/f2/Abdus_Salam1.jpg/440px-Abdus_Salam1.jpg)
+![Dr. Abdus Salam at the blackboard — Pakistan's first and only Nobel laureate in science](/image/Salam1.png)
 
 ## Introduction
 
@@ -33,7 +33,7 @@ The story of Dr. Abdus Salam presents two irreconcilable legacies: that of the c
 
 His impact extended far beyond theoretical research. He was instrumental in establishing the Pakistan Atomic Energy Commission (PAEC) and the Pakistan Space and Upper Atmosphere Research Commission (SUPARCO). He played a crucial role in Pakistan's nuclear program, recruiting and mentoring key physicists. Yet this entire scientific heritage would be actively disowned by the state.
 
-![The ICTP in Trieste, founded by Salam to fight the intellectual isolation of scientists from the Global South](https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/ICTP_Trieste.jpg/640px-ICTP_Trieste.jpg)
+![The ICTP in Trieste, founded by Salam to fight the intellectual isolation of scientists from the Global South](/image/salam3.jpg)
 
 ## The International Centre for Theoretical Physics
 
@@ -42,6 +42,8 @@ While building scientific capacity at home, Salam was simultaneously fighting ag
 > "When in Pakistan I was the only theoretical physicist in the country. The nearest colleague was in Bombay... You have no idea of what that can be like. A theoretical physicist has got to be able to talk, to discuss, to shout if needed."
 
 To this day, the center hosts thousands of scientists each year, a vibrant testament to Salam's conviction that "science is the common heritage of humankind." His personal commitment was absolute: he donated his entire share of the Nobel Prize money to establish a fund for gifted students from Pakistan and India.
+
+![Salam in his study, reading the news from home — surrounded by the books and honours of a life in physics](/image/salam2.jpg)
 
 ## The Erasure
 
@@ -78,7 +80,7 @@ To truly honor Abdus Salam would require dismantling the entire legal architectu
         "excerpt": "Aviation emits disproportionately and harms unequally. The technology fix addresses emissions intensity while leaving untouched the deeper distributional failures at the heart of aviation's climate problem.",
         "published_at": ts(2025, 4, 18),
         "body": """\
-![A commercial aircraft in flight against a cloudy sky](https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/KLM_Boeing_777-300ER_PH-BVD_MUC_2015_01.jpg/640px-KLM_Boeing_777-300ER_PH-BVD_MUC_2015_01.jpg)
+![A jet at cruising altitude, contrails streaming across a clear sky](/image/aviation1.jpg)
 
 ## Introduction
 
@@ -109,8 +111,6 @@ The central limitation of the technology fix is that it addresses emissions inte
 Carbon offsetting compounds this problem. CORSIA relies substantially on forestry and land-use credits sited in the Global South, and evidence suggests a substantial share may not represent genuine, permanent carbon removals. More critically, even technically valid offsets represent a transfer of climate responsibility rather than its elimination, placing the cost of maintaining carbon sinks on communities that bear no responsibility for the flights being offset.
 
 ## The Middle Eastern Hub Model: Democratisation and Contradiction
-
-![Gulf hub airports have transformed long-haul access for South Asian middle classes](https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Hamad_International_Airport_inside.jpg/640px-Hamad_International_Airport_inside.jpg)
 
 The Middle Eastern hub model — Emirates, Qatar Airways, and Etihad operating through Dubai, Doha, and Abu Dhabi — introduces genuine complexity that a straightforward North-South critique cannot accommodate. These carriers have materially expanded long-haul access for South Asian middle classes in ways that legacy carriers never prioritised. For passengers from Pakistan, India, Bangladesh, and the Philippines, Gulf connections represent the primary infrastructure of diaspora mobility, labour migration, and pilgrimage.
 
@@ -145,7 +145,7 @@ Closing that gap requires technology and something considerably harder: a struct
         "excerpt": "I started my Master's in the AI era of education. That puts me squarely in a strange place. Not about whether to use AI, but about what understanding means when the tools can do almost everything faster.",
         "published_at": ts(2025, 6, 1),
         "body": """\
-![A developer working at a desk with multiple screens](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/Zotac_MEK_Ultra_-_CES_2018_%2839513388260%29.jpg/640px-Zotac_MEK_Ultra_-_CES_2018_%2839513388260%29.jpg)
+![A developer at a multi-monitor workstation — the agent in the loop, not running it](/image/Agent2.png)
 
 I started my Master's in Computer Science two years ago. That puts me squarely in the AI era of education, which is a strange place to be.
 
@@ -183,7 +183,7 @@ AI was present throughout. That was never the variable. The variable was whether
 
 ## The Hackathon
 
-![A hackathon in progress — teams building under time pressure](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Hackathon_Toronto_Tableau_Software.jpg/640px-Hackathon_Toronto_Tableau_Software.jpg)
+![A hackathon in progress — teams building under time pressure](/image/Agent1.png)
 
 Then I saw what Finger had done at a hackathon in Baden, and it clicked.
 
