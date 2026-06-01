@@ -12,6 +12,13 @@ const projects = [
     featured: true,
   },
   {
+    title: 'GRE Prep Station',
+    tagline: 'A GRE vocabulary trainer built for my sister.',
+    desc: 'My sister needed to prep for the GRE. I built her an app. 985 words across 32 sets, flashcards with AI-generated definitions and mnemonics via Groq, multiple-choice and written-answer quizzes with semantic grading, per-user progress tracking, and a full admin panel. The kind of project that clarifies what product thinking actually means: you know the user personally, you know exactly what they need, and you have to make it work for them rather than for an abstraction.',
+    tags: ['FastAPI', 'PostgreSQL', 'Groq', 'Vanilla JS', 'Docker', 'GCP'],
+    featured: false,
+  },
+  {
     title: 'Weave',
     tagline: 'Enterprise RAG system with a proper agentic layer.',
     desc: 'Multi-source RAG architecture spanning Postgres, Neo4j, Slack, and ERP data. ReACT agent trace panel, multi-source routing, and a Star Wars lightsaber colour scheme that somehow makes the interface feel right. Built to understand what production agentic systems actually require.',

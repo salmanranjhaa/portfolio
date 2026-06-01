@@ -14,12 +14,12 @@ const stats = [
 ]
 
 const quickLinks = [
-  { label: 'Academic Projects', desc: 'IMP, HuggingFace Framework, PITAS and other research-backed builds',        to: '/projects/academic', icon: BookOpen },
-  { label: 'Personal Projects', desc: 'Loadedout, Weave, Pitwall and other things built for the sake of building', to: '/projects/personal', icon: Zap },
-  { label: 'Experience',        desc: 'FBK Milan, IRI HSG, Teaching Assistant, Bocconi and HSG education',          to: '/experience',        icon: Briefcase },
-  { label: 'About',             desc: 'Who I am, what drives me, and why the enterprise plus AI intersection matters', to: '/about',            icon: User },
-  { label: 'Articles',          desc: 'Writing on AI, enterprise software, and whatever else is worth articulating', to: '/articles',          icon: FileText },
-  { label: 'Get in Touch',      desc: 'salman.ranjha@outlook.com · Based in St. Gallen, Switzerland',               to: 'mailto:salman.ranjha@outlook.com', icon: Mail, external: true },
+  { label: 'Academic Projects', desc: 'IMP, HuggingFace Framework, PITAS and other research-backed builds',         to: '/projects/academic', icon: BookOpen },
+  { label: 'Personal Projects', desc: 'Loadedout, GRE Prep Station, Weave, Pitwall and other things built to solve real problems', to: '/projects/personal', icon: Zap },
+  { label: 'Experience',        desc: 'FBK Milan, IRI HSG, Teaching Assistant, Bocconi and HSG education',           to: '/experience',        icon: Briefcase },
+  { label: 'About',             desc: 'Who I am, what drives me, and why the enterprise plus AI intersection matters', to: '/about',             icon: User },
+  { label: 'Articles',          desc: 'Writing on AI, enterprise software, and whatever else demands articulation',   to: '/articles',          icon: FileText },
+  { label: 'Get in Touch',      desc: 'salman.ranjha@outlook.com · Based in St. Gallen, Switzerland',                to: 'mailto:salman.ranjha@outlook.com', icon: Mail, external: true },
 ]
 
 function Counter({ target, suffix }: { target: number; suffix: string }) {
@@ -49,38 +49,11 @@ function Counter({ target, suffix }: { target: number; suffix: string }) {
   return <span ref={ref}>{count}{suffix}</span>
 }
 
-function StarField() {
-  const pts = [
-    { x: '82%', y: '18%', s: 5, d: 3.2 },
-    { x: '91%', y: '42%', s: 3, d: 4.5 },
-    { x: '74%', y: '62%', s: 4, d: 5.1 },
-    { x: '88%', y: '72%', s: 3, d: 3.7 },
-  ]
-  return (
-    <div className="pointer-events-none absolute inset-0 hidden md:block overflow-hidden" aria-hidden="true">
-      {pts.map((p, i) => (
-        <motion.div
-          key={i}
-          className="absolute text-gold"
-          style={{ left: p.x, top: p.y }}
-          animate={{ opacity: [0.25, 0.7, 0.25] }}
-          transition={{ duration: p.d, repeat: Infinity, ease: 'easeInOut', delay: i * 0.6 }}
-        >
-          <svg width={p.s} height={p.s} viewBox="0 0 24 24">
-            <path d="M12 0.5L13.7 10.3L23.5 12L13.7 13.7L12 23.5L10.3 13.7L0.5 12L10.3 10.3Z" fill="currentColor" />
-          </svg>
-        </motion.div>
-      ))}
-    </div>
-  )
-}
-
 export default function Home() {
   return (
     <div>
       {/* Hero */}
       <div className="relative px-10 pt-14 pb-10 border-b border-rule overflow-hidden">
-        <StarField />
         <div className="flex items-start gap-10 max-w-2xl relative">
           <motion.img
             initial={{ opacity: 0, scale: 0.92 }}
@@ -113,10 +86,11 @@ export default function Home() {
               initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.18, ease: EASE }}
               className="text-[0.875rem] text-papersoft leading-relaxed max-w-[480px]"
             >
-              Two and a half years building enterprise software for J&amp;J, Abbott and Stryker at FBK
-              in Milan, then an MSc at HSG where the focus shifted to building agentic AI systems.
-              The Integrated Master's Project brings both together: trustworthy agentic architectures
-              for regulated SAP workflows. That intersection is where the interesting problems live.
+              3 years building and shipping enterprise software for life sciences multinationals at FBK
+              in Milan, then an MSc at HSG that coincided with AI taking over everything. The timing
+              raised questions worth chasing: what does it mean to trust these systems, where do they
+              break, and how do you build with them in environments where getting it wrong actually
+              costs something? That's what the work has been about.
             </motion.p>
           </div>
         </div>
