@@ -14,23 +14,83 @@ body {
 
 ::selection { background: #d4af61; color: #090b12; }
 
-/* Night sky fixed background */
 .skybg {
   position: fixed;
   inset: 0;
   z-index: -2;
   background:
-    radial-gradient(1200px 700px at 75% -5%, rgba(212,175,97,0.08), transparent 60%),
-    radial-gradient(900px 600px at 8% 10%, rgba(189,76,95,0.07), transparent 55%),
+    radial-gradient(1200px 700px at 78% -8%, rgba(212,175,97,0.12), transparent 60%),
+    radial-gradient(900px 600px at 10% 8%, rgba(189,76,95,0.1), transparent 55%),
     linear-gradient(180deg, #0b0e17 0%, #090b12 40%, #07080e 100%);
+}
+
+.milkyway {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  transform: rotate(-22deg) scale(1.4);
+  transform-origin: 50% 42%;
+  background:
+    radial-gradient(58% 18% at 50% 42%, rgba(224,216,240,0.07), rgba(224,216,240,0.02) 45%, transparent 76%),
+    radial-gradient(34% 12% at 41% 39%, rgba(212,175,97,0.06), transparent 72%),
+    radial-gradient(40% 14% at 61% 46%, rgba(150,176,224,0.06), transparent 74%);
+  filter: blur(7px);
+  mix-blend-mode: screen;
+  pointer-events: none;
 }
 
 @keyframes twinkle {
   0%, 100% { opacity: var(--o, 0.5); }
-  50% { opacity: calc(var(--o, 0.5) * 0.22); }
+  50% { opacity: calc(var(--o, 0.5) * 0.18); }
 }
 
-/* ---- component helpers ---- */
+@keyframes polarispulse {
+  0%, 100% { opacity: 0.7; filter: brightness(1); }
+  50% { opacity: 1; filter: brightness(1.5); }
+}
+
+.polaris-star {
+  position: absolute;
+  width: 3px; height: 3px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 8px 3px rgba(255,247,230,0.9), 0 0 22px 7px rgba(212,175,97,0.55);
+  animation: polarispulse 4.5s ease-in-out infinite;
+}
+.polaris-star::before, .polaris-star::after {
+  content: '';
+  position: absolute;
+  left: 50%; top: 50%;
+}
+.polaris-star::before {
+  width: 1px; height: 60px;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(180deg, transparent, rgba(212,175,97,0.7), transparent);
+}
+.polaris-star::after {
+  width: 60px; height: 1px;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(90deg, transparent, rgba(212,175,97,0.7), transparent);
+}
+
+@keyframes shoot1 {
+  0%   { transform: translate3d(0,0,0) rotate(24deg); opacity: 0; }
+  4%   { opacity: 0; }
+  6%   { opacity: 1; }
+  18%  { transform: translate3d(380px,168px,0) rotate(24deg); opacity: 0; }
+  100% { transform: translate3d(380px,168px,0) rotate(24deg); opacity: 0; }
+}
+.meteor {
+  position: absolute;
+  width: 120px; height: 1px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, rgba(212,175,97,0) 0%, rgba(255,247,230,0.9) 100%);
+  filter: drop-shadow(0 0 4px rgba(212,175,97,0.6));
+  opacity: 0;
+  animation: shoot1 14s ease-in-out 8s infinite;
+  will-change: transform, opacity;
+}
+
 @layer components {
   .tag {
     @apply inline-block bg-[rgba(236,231,220,0.06)] text-muted text-[0.68rem] font-mono px-2 py-0.5 rounded border border-rule;
@@ -61,8 +121,8 @@ body {
     position: absolute;
     left: 0;
     top: 0.45em;
-    width: 5px;
-    height: 5px;
+    width: 4px;
+    height: 4px;
     border-radius: 50%;
     background: #d4af61;
   }

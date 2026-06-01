@@ -6,14 +6,13 @@ import Starfield from './Starfield'
 const pageVariants = {
   initial: { opacity: 0, y: 14 },
   animate: { opacity: 1, y: 0, transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] } },
-  exit: { opacity: 0, y: -8, transition: { duration: 0.2 } },
+  exit:    { opacity: 0, y: -8,  transition: { duration: 0.2 } },
 }
 
 export default function Layout() {
   const location = useLocation()
   return (
     <div className="flex min-h-screen">
-      <div className="skybg" aria-hidden="true" />
       <Starfield />
       <Sidebar />
       <main className="flex-1 md:ml-[240px] min-h-screen relative z-10">
