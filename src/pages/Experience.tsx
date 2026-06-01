@@ -15,7 +15,7 @@ const jobs = [
   {
     role: 'Research Assistant',
     org: 'Institute of Responsible Innovation, HSG',
-    period: '2024 · Ongoing',
+    period: 'Sep 2025 · Mar 2026',
     bullets: [
       'Building large-scale data pipelines across 200,000+ Kickstarter projects for entrepreneurship research.',
       'Audio transcription using Whisper Large v3 on GCP GPU instances, creator biography classification via two-stage NLI pipeline.',
