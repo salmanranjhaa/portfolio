@@ -59,7 +59,7 @@ export default function Home() {
             initial={{ opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, ease: EASE }}
-            src="/image/profile.png"
+            src="/image/profile.jpg"
             alt="Salman Ranjha"
             className="w-[110px] h-[110px] rounded-full object-cover border border-rule flex-shrink-0"
           />
