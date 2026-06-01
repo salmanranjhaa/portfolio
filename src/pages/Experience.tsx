@@ -25,7 +25,7 @@ const jobs = [
   {
     role: 'Technical Business Analyst',
     org: 'FBK S.r.l., Milan',
-    period: '2021 · 2024',
+    period: 'Nov 2021 · Oct 2024',
     bullets: [
       'Served 10+ enterprise clients across pharma and medtech, with Johnson & Johnson as primary account from Business Analyst to IT Director engagement.',
       'Led EUR 200k+ deal closures and managed project streams worth EUR 300k+ for J&J alone.',
