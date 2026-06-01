@@ -203,9 +203,7 @@ Most of the conversation around AI is still stuck on capability. Can it write co
 
 There was always a difference between the box tickers and the people who took the system apart. AI has not changed that. It has just made it easier to tick the box convincingly, which makes the distinction harder to see and more important to maintain.
 
-The slower path is not worth it because friction is romantic. It is worth it because understanding is what you are left with when the tool changes, and the tool always changes.
-
-That is not a low bar. It is just the right one.
+The question was never whether you used the tool. It was always whether you understood the problem. That has not changed. It just got easier to pretend otherwise.
 """,
     },
 ]
