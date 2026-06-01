@@ -18,7 +18,7 @@ const quickLinks = [
   { label: 'Personal Projects', desc: 'Loadedout, GRE Prep Station, Weave, Pitwall and other things built to solve real problems', to: '/projects/personal', icon: Zap },
   { label: 'Experience',        desc: 'FBK Milan, IRI HSG, Teaching Assistant, Bocconi and HSG education',           to: '/experience',        icon: Briefcase },
   { label: 'About',             desc: 'Who I am, what drives me, and why the enterprise plus AI intersection matters', to: '/about',             icon: User },
-  { label: 'Articles',          desc: 'Writing on AI, enterprise software, and whatever else demands articulation',   to: '/articles',          icon: FileText },
+  { label: 'Articles',          desc: 'Writing on AI, and whatever else demands articulation',   to: '/articles',          icon: FileText },
   { label: 'Get in Touch',      desc: 'salman.ranjha@outlook.com · Based in St. Gallen, Switzerland',                to: 'mailto:salman.ranjha@outlook.com', icon: Mail, external: true },
 ]
 

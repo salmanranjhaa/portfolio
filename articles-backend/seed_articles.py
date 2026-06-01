@@ -231,43 +231,37 @@ def main():
 # before main() runs, so the __main__ guard lives at the end of the file (below).
 ARTICLES.append({
     "id": str(uuid.uuid4()),
-    "title": "I Got Frustrated and Built an App. Then My Sister Sent Me an Excel File.",
-    "excerpt": "Two personal projects, two real users, and the cleanest argument for just building the thing yourself.",
+    "title": "Execution Is Cheap Now",
+    "excerpt": "Building software used to be the hard part. It no longer is, which moves the whole game to product thinking: not whether you can build the thing, but whether you understood what was worth building.",
     "published_at": ts(2025, 6, 15),
     "body": """\
-There is a specific kind of frustration that comes from opening an app that is supposed to help you and immediately being asked to fill out a form about your goals, your body type, your activity level, your dietary philosophy, and whether you would like to receive motivational notifications.
+For most of the history of software, the hard part was building it. You had an idea, then spent weeks fighting syntax and infrastructure to drag it into existence. If you could build the thing at all, that was the achievement.
 
-I do not want motivational notifications. I want to log that I did a workout and move on with my day.
+That constraint is mostly gone. I can now take an idea to a deployed product in a weekend. When the expensive thing becomes cheap, the question changes: not whether you can build it, but whether you understood what was worth building. Two small projects taught me that better than anything I have submitted for a grade.
 
-I was in my second semester at HSG, teaching two days a week, doing research two others, trying to train consistently, cook reasonable food, and not lose track of what was happening when. Every fitness app I tried either wanted too much from me upfront or gave me too much back. Dashboards built for people whose primary hobby is tracking themselves. I am not that person. I just needed something that remembered what I did yesterday so I could do slightly more today.
+## The One I Actually Open
 
-So I built [Loadedout](https://loadedout.online).
+Every fitness app I tried wanted too much before it gave anything back: declare your goals, your body type, your activity level, whether you want motivational notifications. I did not want motivational notifications. I wanted to log a workout and get on with my day. I just needed something that remembered what I did yesterday so I could do slightly more today.
 
-FastAPI backend, Vertex AI for the coaching layer, Google Calendar sync so my training blocks actually live where my schedule lives. The AI coaching piece is not decorative — it reads your recent history and tells you something specific, not generic. It does not tell you to stay hydrated. It notices that you have skipped legs three weeks in a row and says so.
+So I built [Loadedout](https://loadedout.online): a FastAPI backend, Vertex AI for coaching, Google Calendar sync so training blocks live with the rest of my schedule. The coaching reads your actual history and says something specific. It does not tell you to stay hydrated. It notices you have skipped legs three weeks running and says so.
 
-The part I did not expect was how much I would actually use it. I have built things before that I stopped using within a month because the friction of maintaining them exceeded the value they returned. Loadedout is the opposite. I open it every day. It has become load-bearing. That feedback loop — building something, using it, noticing what is wrong, fixing it — is a different kind of learning than any project I have submitted for a grade.
+What surprised me was not that it worked, but that I kept using it. I have abandoned plenty of things I built within a month. This one I open every day, and that is the only review that matters: not whether a project is clever, but whether it survives contact with your actual life. It was good because I was the user, and I could not lie to myself about what I needed.
 
----
+## She Asked for a Word Document
 
-A few months later my sister sent me an Excel file.
+A few months later my sister sent me an Excel file of GRE vocabulary she had to memorise, with a simple request: could I put it into a nicer Word document.
 
-It was a list of GRE vocabulary words she needed to memorise before an exam. Hundreds of them. The message with it was essentially: can you put these in a Word document in a nicer format?
+I could have done that in twenty minutes. Instead I spent a weekend building her [GRE Prep Station](http://34.17.37.87:8040/): flashcards, a quiz mode, AI generated definitions and mnemonics through Groq, and semantic grading that checks whether she understood a word rather than matched the dictionary phrasing. It runs on GCP under Docker Compose.
 
-I could have done that in twenty minutes. Instead I spent a weekend building her an app.
+She did not ask for any of that. But the Word document was the stated requirement, not the problem. She did not need a nicer list. She needed the words to stay in her head, and once you see that difference the document is obviously the wrong deliverable. Building for someone else makes this harder: they hand you their version of the problem and it is tempting to just build it. As my own user I could not hide behind a spec. Building for her forced me to do on purpose what being the user had done automatically: solve what was meant, not what was asked.
 
-[GRE Prep Station](https://github.com/salmanranjhaa/GRE_prep_studio) has flashcard mode, a quiz mode, AI-generated definitions and mnemonics via Groq, semantic grading so it evaluates whether you actually understood a word rather than just pattern-matched the dictionary definition, and a progress tracker so she could see what was sticking and what was not. Admin panel so I could add new word sets. Deployed on GCP with Docker Compose.
+## When Building Is Free
 
-She did not ask for any of that. She asked for a Word document.
+Neither of these is the most demanding thing I have built. PITAS was more complex, and the IMP research involves harder problems. But these are the two I describe most easily, because the only real question was whether I had read the problem correctly. The interesting part is the judgment, not the code.
 
-But I knew the actual problem. She did not need a nicer list. She needed a way to study that would make the words stay. The Excel file was the stated requirement. Learning the words was the real one.
+That is the shift worth naming. When building was expensive, being able to build was the differentiator. Now that it is close to free, it is not. What separates a useful thing from a discarded one is product thinking: looking past the stated request to the actual need, then using what you built as the test of whether you got it right. The same instinct matters well beyond weekend projects, in the enterprise systems and agentic AI work I do now, where a stakeholder will happily hand you a precise specification for the wrong thing.
 
-This is the thing about building for someone you know: you cannot hide behind the spec. You know what they actually need and you either build for that or you do not. There is no ambiguity to retreat into.
-
----
-
-Neither of these projects is technically the most impressive thing I have built. The distributed systems work for PITAS was more complex. The IMP research involves harder problems. But Loadedout and GRE Prep are the ones I find myself talking about most naturally, because the motivation is self-evident. You do not have to explain why someone would want to track their workouts or why a student needs to learn vocabulary. The problem is obvious. The only interesting question is whether you built something that actually solves it.
-
-Both of them did. That is a higher bar than it sounds.
+My sister still uses the app. I still open mine. That is the entire review.
 """,
 })
 

@@ -25,7 +25,7 @@ export default function Articles() {
       <PageHeader
         eyebrow="Articles"
         title="Things worth writing down."
-        subtitle="On AI, enterprise software, and whatever else demands articulation."
+        subtitle="On AI, and whatever else demands articulation."
       />
       <div className="px-10 py-10 max-w-2xl">
         {loading && <p className="text-muted text-sm">Loading...</p>}
