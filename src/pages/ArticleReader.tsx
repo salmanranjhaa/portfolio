@@ -11,6 +11,7 @@ function formatDate(iso: string) {
 
 function renderMd(md: string): string {
   return md
+    .replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<figure class="my-8"><img src="$2" alt="$1" class="w-full rounded-lg border border-rule object-cover max-h-80" /><figcaption class="text-center font-mono text-[0.65rem] text-muted mt-2">$1</figcaption></figure>')
     .replace(/^### (.+)$/gm, '<h3 class="font-serif text-[1.05rem] font-bold mt-7 mb-3 text-paper">$1</h3>')
     .replace(/^## (.+)$/gm, '<h2 class="font-serif text-[1.3rem] font-bold mt-9 mb-4 text-paper">$1</h2>')
     .replace(/^# (.+)$/gm, '<h1 class="font-serif text-[1.6rem] font-bold mt-9 mb-5 text-paper">$1</h1>')
@@ -18,7 +19,7 @@ function renderMd(md: string): string {
     .replace(/\*(.+?)\*/g, '<em>$1</em>')
     .replace(/`(.+?)`/g, '<code class="font-mono text-[0.85em] bg-[#1c2035] text-gold px-1.5 py-0.5 rounded">$1</code>')
     .replace(/^> (.+)$/gm, '<blockquote class="border-l-[2px] border-gold pl-5 py-2 bg-[rgba(212,175,97,0.05)] rounded-r my-5 italic text-papersoft">$1</blockquote>')
-    .replace(/^\[(.+?)\]\((.+?)\)$/gm, '<a href="$2" class="text-gold underline underline-offset-2 hover:text-goldsoft" target="_blank">$1</a>')
+    .replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" class="text-gold underline underline-offset-2 hover:text-goldsoft" target="_blank" rel="noopener noreferrer">$1</a>')
     .replace(/^- (.+)$/gm, '<li class="ml-4 list-disc text-papersoft">$1</li>')
     .replace(/^(\d+)\. (.+)$/gm, '<li class="ml-4 list-decimal text-papersoft">$2</li>')
     .replace(/\n\n/g, '</p><p class="mb-4">')
