@@ -16,6 +16,7 @@ const projects = [
     tagline: 'A vocabulary trainer built for my sister.',
     desc: 'My sister needed to prep for the GRE. I built her an app. Flashcards with AI-generated definitions and mnemonics, multiple-choice and written-answer quizzes with semantic grading, per-user progress tracking, and a full admin panel. The kind of project that clarifies what product thinking actually means: you know the user personally, you know exactly what they need, and you have to make it work for them rather than for an abstraction.',
     tags: ['FastAPI', 'PostgreSQL', 'Groq', 'Vanilla JS', 'Docker', 'GCP'],
+    live: 'http://34.17.37.87:8040',
     github: 'https://github.com/salmanranjhaa/GRE_prep_studio',
     featured: false,
   },
@@ -45,7 +46,7 @@ export default function PersonalProjects() {
         title="Built for the sake of building."
         subtitle="Things that started as curiosity and ended up in production, or close enough."
       />
-      <div className="px-10 py-10 max-w-3xl space-y-5">
+      <div className="px-10 py-10 max-w-3xl mx-auto space-y-5">
         {projects.map((p, i) => (
           <FadeIn key={p.title} delay={i * 0.07}>
             <div className={`rounded-xl p-7 border transition-all duration-200 hover:bg-[#1c2035] ${
@@ -58,7 +59,7 @@ export default function PersonalProjects() {
                   <h3 className="font-serif text-[1.1rem] font-bold text-paper">{p.title}</h3>
                   <p className="text-[0.78rem] text-gold font-mono mt-0.5">{p.tagline}</p>
                 </div>
-                {p.featured && (
+                {p.live && (
                   <span className="flex-shrink-0 font-mono text-[0.6rem] text-gold bg-[rgba(212,175,97,0.1)] border border-[rgba(212,175,97,0.25)] px-2 py-0.5 rounded uppercase tracking-widest">
                     Live
                   </span>

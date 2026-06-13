@@ -6,10 +6,10 @@ const jobs = [
   {
     role: 'Teaching Assistant, CS Fundamentals',
     org: 'University of St. Gallen',
-    period: '2025 · Ongoing',
+    period: 'Feb 2025 · Ongoing',
     bullets: [
-      'Teaching Python and core CS concepts to 40-50 students per semester.',
-      'Running exercise sessions, grading, and office hours for the introductory programming course.',
+      'Run weekly sessions for 40-50 students covering Python, SQL, and databases, with assignment reviews, exam preparation, and end-to-end project delivery; evaluate team projects on code quality, system design, and presentation.',
+      'Guide students from non-technical backgrounds through full project delivery with a product-first approach; class projects voted best in cohort by peers for two consecutive semesters, out of 12+ parallel exercise classes.',
     ],
   },
   {
@@ -30,7 +30,8 @@ const jobs = [
       'Served 10+ enterprise clients across pharma and medtech, with Johnson & Johnson as primary account from Business Analyst to IT Director engagement.',
       'Led EUR 200k+ deal closures and managed project streams worth EUR 300k+ for J&J alone.',
       'Delivered SAP and JD Edwards ERP implementations including custom integrations, data migration, and cross-system workflows.',
-      'Identified and escalated a pricing control mechanism being used to circumvent legally prohibited below-cost selling; implementation was halted.',
+      'Owned a blind price-floor control as PM, technical BA, and single client point of contact: encrypted manufacturing prices invisible even to the sales and tendering teams using them, with any offer below the floor blocked at save.',
+      'Scaled the module from a single-country pilot to all 32 J&J markets; it was later sold to other clients.',
       'Produced full delivery artefacts: functional analyses, Azure DevOps backlogs, UAT scripts, and hypercare documentation.',
     ],
   },
@@ -38,7 +39,7 @@ const jobs = [
 
 const education = [
   {
-    degree: 'MSc in Computer Science, Data Science & AI',
+    degree: 'MSc in Computer Science (AI and Data Science specialisation)',
     school: 'University of St. Gallen (HSG)',
     period: '2024 · 2026',
     note: 'Integrated Master\'s Project: Trustworthy Agentic AI for SAP P2P Workflows',
@@ -47,7 +48,7 @@ const education = [
     degree: 'BSc in Economics, Management and Computer Science',
     school: 'Bocconi University, Milan',
     period: '2018 · 2021',
-    note: 'Focus on quantitative methods, corporate finance, and software fundamentals',
+    note: 'Focus on quantitative methods, corporate finance, and data science',
   },
 ]
 
@@ -80,7 +81,7 @@ export default function Experience() {
         title="Where the work happened."
         subtitle="Enterprise software delivery, academic research, and teaching — across Milan and St. Gallen."
       />
-      <div className="px-10 py-10 max-w-3xl space-y-14">
+      <div className="px-10 py-10 max-w-3xl mx-auto space-y-14">
 
         {/* Timeline */}
         <FadeIn>
