@@ -53,8 +53,8 @@ export default function Home() {
   return (
     <div>
       {/* Hero */}
-      <div className="relative px-10 pt-14 pb-10 border-b border-rule overflow-hidden">
-        <div className="flex items-start gap-10 max-w-2xl relative">
+      <div className="relative px-6 md:px-10 pt-14 pb-10 border-b border-rule overflow-hidden">
+        <div className="flex flex-col items-center text-center md:flex-row md:items-start md:text-left gap-6 md:gap-10 max-w-3xl mx-auto relative">
           <motion.img
             initial={{ opacity: 0, scale: 0.92 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -84,7 +84,7 @@ export default function Home() {
             </motion.p>
             <motion.p
               initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.18, ease: EASE }}
-              className="text-[0.875rem] text-papersoft leading-relaxed max-w-[480px]"
+              className="text-[0.875rem] text-papersoft leading-relaxed max-w-[480px] mx-auto md:mx-0"
             >
               3 years building and shipping enterprise software for life sciences multinationals at FBK
               in Milan, then an MSc at HSG that coincided with AI taking over everything. The timing
@@ -96,7 +96,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="px-10 py-10 max-w-3xl">
+      <div className="px-10 py-10 max-w-3xl mx-auto">
         {/* Stats */}
         <FadeIn>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
