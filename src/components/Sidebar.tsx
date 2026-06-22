@@ -59,7 +59,7 @@ export default function Sidebar() {
             Salman Ranjha
           </div>
           <div className="text-[0.65rem] text-muted uppercase tracking-widest leading-relaxed font-mono">
-            MSc Data Science &amp; AI<br />University of St. Gallen
+            MSc Computer Science<br />AI &amp; Data Science<br />University of St. Gallen
           </div>
         </div>
 

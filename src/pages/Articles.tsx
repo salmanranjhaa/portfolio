@@ -26,8 +26,9 @@ export default function Articles() {
         eyebrow="Articles"
         title="Things worth writing down."
         subtitle="On AI, and whatever else demands articulation."
+        width="max-w-2xl"
       />
-      <div className="px-10 py-10 max-w-2xl">
+      <div className="px-10 py-10 max-w-2xl mx-auto">
         {loading && <p className="text-muted text-sm">Loading...</p>}
         {!loading && articles.length === 0 && (
           <p className="text-muted text-sm">No articles yet. Check back soon.</p>

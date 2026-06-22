@@ -27,6 +27,10 @@ export default function ArticleReader() {
   const [error, setError] = useState(false)
 
   useEffect(() => {
+    if (article) document.title = `${article.title} — Salman Ranjha`
+  }, [article])
+
+  useEffect(() => {
     if (!id) return
     fetch(`${API_BASE}/articles/${id}`)
       .then(r => { if (!r.ok) throw new Error(); return r.json() })
@@ -35,7 +39,7 @@ export default function ArticleReader() {
   }, [id])
 
   return (
-    <div className="px-10 pt-14 pb-20 max-w-2xl">
+    <div className="px-10 pt-14 pb-20 max-w-2xl mx-auto">
       <Link to="/articles" className="inline-flex items-center gap-1.5 font-mono text-[0.72rem] text-muted hover:text-gold transition-colors mb-10">
         ← All articles
       </Link>

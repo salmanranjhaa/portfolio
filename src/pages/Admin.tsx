@@ -88,7 +88,7 @@ export default function Admin() {
       <div className="max-w-3xl mx-auto px-8 py-12">
         <div className="flex items-center justify-between mb-10 pb-5 border-b border-rule">
           <span className="font-serif text-[1.1rem] text-paper">Admin</span>
-          <a href="/articles.html" className="text-muted text-sm hover:text-gold transition-colors font-mono">← Articles</a>
+          <a href="/articles" className="text-muted text-sm hover:text-gold transition-colors font-mono">← Articles</a>
         </div>
 
         {status && (

@@ -1,7 +1,17 @@
+import { useEffect } from 'react'
 import { Outlet, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
 import Sidebar from './Sidebar'
 import Starfield from './Starfield'
+
+const pageTitles: Record<string, string> = {
+  '/':                  'Salman Ranjha — AI & Enterprise Software',
+  '/about':             'About — Salman Ranjha',
+  '/projects/academic': 'Academic Projects — Salman Ranjha',
+  '/projects/personal': 'Personal Projects — Salman Ranjha',
+  '/experience':        'Experience — Salman Ranjha',
+  '/articles':          'Articles — Salman Ranjha',
+}
 
 const pageVariants = {
   initial: { opacity: 0, y: 14 },
@@ -11,6 +21,9 @@ const pageVariants = {
 
 export default function Layout() {
   const location = useLocation()
+  useEffect(() => {
+    document.title = pageTitles[location.pathname] ?? 'Salman Ranjha'
+  }, [location.pathname])
   return (
     <div className="flex min-h-screen">
       <Starfield />
