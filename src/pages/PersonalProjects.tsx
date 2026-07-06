@@ -23,8 +23,9 @@ const projects = [
   {
     title: 'Weave',
     tagline: 'Enterprise RAG system with a proper agentic layer.',
-    desc: 'Multi-source RAG architecture spanning Postgres, Neo4j, Slack, and ERP data. ReACT agent trace panel, multi-source routing, and a Star Wars lightsaber colour scheme that somehow makes the interface feel right. Built to understand what production agentic systems actually require.',
-    tags: ['FastAPI', 'PostgreSQL', 'Neo4j', 'React', 'ReACT Agents', 'RAG'],
+    desc: 'Two agents sharing one enterprise data layer, built around a simulated MedTech ERP company: Weave, a multi-source RAG router that picks between Postgres, a Slack vector store, and a Neo4j org graph per query, and STRATA, a ReACT agent that renders its Thought-Action-Observation loop live as it reasons through multi-hop questions. Voice input via Whisper, live routing logs, and a Star Wars lightsaber colour scheme that somehow makes the interface feel right. Built to understand what production agentic systems actually require.',
+    tags: ['FastAPI', 'LlamaIndex', 'PostgreSQL', 'ChromaDB', 'Neo4j', 'ReACT Agents', 'RAG'],
+    live: 'https://erp-rag.34.17.100.46.sslip.io',
     github: 'https://github.com/salmanranjhaa/Weave',
     featured: false,
   },
@@ -47,7 +48,7 @@ export default function PersonalProjects() {
         title="Built for the sake of building."
         subtitle="Things that started as curiosity and ended up in production, or close enough."
       />
-      <div className="px-10 py-10 max-w-3xl mx-auto space-y-5">
+      <div className="px-6 md:px-10 py-10 max-w-3xl mx-auto space-y-5">
         {projects.map((p, i) => (
           <FadeIn key={p.title} delay={i * 0.07}>
             <div className={`rounded-xl p-7 border transition-all duration-200 hover:bg-[#1c2035] ${
