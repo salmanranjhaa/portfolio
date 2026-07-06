@@ -43,29 +43,34 @@ export default function AcademicProjects() {
               </span>
             </div>
             <h2 className="font-serif text-[1.25rem] font-bold text-paper mb-1.5 leading-snug">
-              Trustworthy Agentic AI for SAP Procure to Pay Workflows
+              AEGIS-P2P, Auditable Enterprise Governance for Intelligent Systems in Procure-to-Pay
             </h2>
             <div className="font-mono text-[0.7rem] text-muted mb-5">
               Interactions Lab, University of St. Gallen · Supervised by Prof. Andrei Ciortea · 12 ECTS
             </div>
             <p className="text-[0.875rem] text-papersoft leading-[1.75] mb-3">
-              Designing and prototyping an agentic architecture for LLM-driven automation of
-              compliance-sensitive ERP workflows, where decisions require an audit trail and
-              explainability is a hard requirement. The architecture pairs a flexible LLM decision
-              layer with formal interaction structure and runtime guardrails.
+              Designing a two layer governance gate for LLM driven automation of compliance
+              sensitive SAP Procure-to-Pay workflows, where every action must be auditable before
+              it runs. An LLM proposes actions; a BSPL information protocol determines which
+              actions are structurally possible from the causal flow of information, and a Cupid
+              commitment norm engine determines which are normatively correct. The system proves
+              conformance before execution rather than logging it after.
             </p>
             <p className="text-[0.875rem] text-papersoft leading-[1.75] mb-3">
-              Working with the BPI Challenge 2019 dataset: 251,000+ real SAP Procure to Pay event
-              logs, using structural anomalies as the primary test bed. Evaluating against an LLM-only
-              baseline and a classical agent baseline.
+              Evaluated on the BPI Challenge 2019 dataset: 251,000+ real SAP Procure-to-Pay event
+              logs, replayed against formal compliance rules that auto generate verdicts at scale.
+              The headline baseline stack isolates each governance layer: LLM only, LLM plus
+              protocol, LLM plus protocol plus norms, with six ablations and a live LLM containment
+              track under blind and informed conditions.
             </p>
             <p className="text-[0.875rem] text-papersoft leading-[1.75] mb-5">
-              The target question is the reliability gap customers will encounter as they adopt Joule
-              and the broader SAP Business AI roadmap: not whether the system can act, but whether it
-              can act in a way that is auditable and safe in regulated environments.
+              The target question is the reliability gap enterprises will face as they adopt Joule
+              and the broader SAP Business AI roadmap: not whether the system can act, but whether
+              it can act in a way that is provably auditable before execution, not merely logged
+              after.
             </p>
             <div className="flex flex-wrap gap-1.5">
-              {['Agentic AI', 'BDI Agents', 'NeMo Guardrails', 'Process Mining', 'SAP P2P', 'LLMs', 'JaCaMo'].map(t => (
+              {['Agentic AI', 'LLMs', 'BSPL', 'Commitment Protocols', 'SAP P2P', 'Process Mining', 'Audit Logs', 'BPI 2019'].map(t => (
                 <span key={t} className="tag-accent">{t}</span>
               ))}
             </div>
