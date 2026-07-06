@@ -249,7 +249,7 @@ What surprised me was not that it worked, but that I kept using it. I have aband
 
 A few months later my sister sent me an Excel file of GRE vocabulary she had to memorise, with a simple request: could I put it into a nicer Word document.
 
-I could have done that in twenty minutes. Instead I spent a weekend building her [GRE Prep Station](http://34.17.37.87:8040/): flashcards, a quiz mode, AI generated definitions and mnemonics through Groq, and semantic grading that checks whether she understood a word rather than matched the dictionary phrasing. It runs on GCP under Docker Compose.
+I could have done that in twenty minutes. Instead I spent a weekend building her [GRE Prep Station](http://34.17.100.46:8040/): flashcards, a quiz mode, AI generated definitions and mnemonics through Groq, and semantic grading that checks whether she understood a word rather than matched the dictionary phrasing. It runs on GCP under Docker Compose.
 
 She did not ask for any of that. But the Word document was the stated requirement, not the problem. She did not need a nicer list. She needed the words to stay in her head, and once you see that difference the document is obviously the wrong deliverable. Building for someone else makes this harder: they hand you their version of the problem and it is tempting to just build it. As my own user I could not hide behind a spec. Building for her forced me to do on purpose what being the user had done automatically: solve what was meant, not what was asked.
 

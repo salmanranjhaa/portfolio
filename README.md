@@ -47,10 +47,10 @@ See [DEPLOYMENT_GUIDE.md](DEPLOYMENT_GUIDE.md) for the full setup — this cover
 
 | What | Detail |
 |---|---|
-| VM | GCP `e2-medium`, zone `europe-west4`, external IP `34.17.37.87` |
+| VM | GCP `e2-standard-4`, zone `europe-west12-c`, external IP `34.17.100.46` |
 | Container | `portfolio-web` (nginx:alpine), port `8090` on host |
 | Reverse proxy | Caddy (inside `loadedout-frontend-1`), handles TLS automatically |
-| Domain | `salmanranjha.me` / `www.salmanranjha.me` (GoDaddy, A records → `34.17.37.87`) |
+| Domain | `salmanranjha.me` / `www.salmanranjha.me` (GoDaddy, A records → `34.17.100.46`) |
 
 To deploy an update:
 
