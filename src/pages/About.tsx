@@ -14,7 +14,7 @@ export default function About() {
         subtitle="Where I'm from, what shaped me, and what I'm building toward."
         width="max-w-2xl"
       />
-      <div className="px-10 py-10 max-w-2xl mx-auto space-y-8">
+      <div className="px-6 md:px-10 py-10 max-w-2xl mx-auto space-y-8">
 
         <FadeIn>
           <p className="text-[0.95rem] text-papersoft leading-[1.8]">

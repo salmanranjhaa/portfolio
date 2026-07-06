@@ -96,7 +96,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="px-10 py-10 max-w-3xl mx-auto">
+      <div className="px-6 md:px-10 py-10 max-w-3xl mx-auto">
         {/* Stats */}
         <FadeIn>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">

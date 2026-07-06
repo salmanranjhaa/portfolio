@@ -39,7 +39,7 @@ export default function ArticleReader() {
   }, [id])
 
   return (
-    <div className="px-10 pt-14 pb-20 max-w-2xl mx-auto">
+    <div className="px-6 md:px-10 pt-14 pb-20 max-w-2xl mx-auto">
       <Link to="/articles" className="inline-flex items-center gap-1.5 font-mono text-[0.72rem] text-muted hover:text-gold transition-colors mb-10">
         ← All articles
       </Link>
@@ -47,11 +47,10 @@ export default function ArticleReader() {
       {article && (
         <article>
           <h1 className="font-serif text-[1.9rem] font-bold text-paper leading-tight mb-4">{article.title}</h1>
-          {article.reading_time ? (
-            <div className="font-mono text-[0.7rem] text-muted mb-10">
-              {article.reading_time} min read
-            </div>
-          ) : <div className="mb-10" />}
+          <div className="font-mono text-[0.7rem] text-muted mb-10">
+            {new Date(article.published_at).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
+            {article.reading_time ? ` · ${article.reading_time} min read` : ''}
+          </div>
           <div
             className="text-[0.94rem] text-papersoft leading-[1.85] space-y-4"
             dangerouslySetInnerHTML={{ __html: `<p class="mb-4">${renderMd(article.body)}</p>` }}

@@ -30,7 +30,7 @@ export default function AcademicProjects() {
         title="Research-backed builds."
         subtitle="Work done in the context of the MSc at HSG and IRI research. Built to academic standards, designed with real deployment in mind."
       />
-      <div className="px-10 py-10 max-w-3xl mx-auto">
+      <div className="px-6 md:px-10 py-10 max-w-3xl mx-auto">
 
         {/* Featured IMP */}
         <FadeIn>

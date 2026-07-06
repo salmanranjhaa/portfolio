@@ -2,7 +2,7 @@ interface Props { eyebrow?: string; title: string; subtitle?: string; width?: st
 
 export default function PageHeader({ eyebrow, title, subtitle, width = 'max-w-3xl' }: Props) {
   return (
-    <div className="px-10 pt-14 pb-9 border-b border-rule">
+    <div className="px-6 md:px-10 pt-14 pb-9 border-b border-rule">
       <div className={`${width} mx-auto`}>
         {eyebrow && (
           <p className="font-mono text-[0.68rem] text-gold uppercase tracking-widest mb-3">{eyebrow}</p>

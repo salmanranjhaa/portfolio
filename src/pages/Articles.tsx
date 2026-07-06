@@ -28,7 +28,7 @@ export default function Articles() {
         subtitle="On AI, and whatever else demands articulation."
         width="max-w-2xl"
       />
-      <div className="px-10 py-10 max-w-2xl mx-auto">
+      <div className="px-6 md:px-10 py-10 max-w-2xl mx-auto">
         {loading && <p className="text-muted text-sm">Loading...</p>}
         {!loading && articles.length === 0 && (
           <p className="text-muted text-sm">No articles yet. Check back soon.</p>
@@ -41,9 +41,10 @@ export default function Articles() {
                 <div className="flex-1 min-w-0">
                   <div className="font-semibold text-[0.9rem] text-paper mb-1 group-hover:text-gold transition-colors">{a.title}</div>
                   {a.excerpt && <p className="text-[0.78rem] text-muted leading-relaxed line-clamp-2">{a.excerpt}</p>}
-                  {a.reading_time ? (
-                    <div className="font-mono text-[0.65rem] text-muted mt-2">{a.reading_time} min read</div>
-                  ) : null}
+                  <div className="font-mono text-[0.65rem] text-muted mt-2">
+                    {new Date(a.published_at).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })}
+                    {a.reading_time ? ` · ${a.reading_time} min read` : ''}
+                  </div>
                 </div>
                 <ArrowRight size={14} className="text-muted group-hover:text-gold transition-colors flex-shrink-0 mt-1" />
               </Link>
