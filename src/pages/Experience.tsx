@@ -42,7 +42,7 @@ const education = [
     degree: 'MSc in Computer Science (AI and Data Science specialisation)',
     school: 'University of St. Gallen (HSG)',
     period: '2024 · 2026',
-    note: 'Integrated Master\'s Project: Trustworthy Agentic AI for SAP P2P Workflows',
+    note: 'Integrated Master\'s Project: AEGIS-P2P, Auditable Enterprise Governance for SAP Procure-to-Pay',
   },
   {
     degree: 'BSc in Economics, Management and Computer Science',
@@ -56,7 +56,7 @@ const skills = [
   {
     heading: 'Applied Competencies',
     groups: [
-      { name: 'Agentic AI Systems', tags: ['ReACT Agents', 'BDI Architectures', 'NeMo Guardrails', 'MCP', 'RAG'] },
+      { name: 'Agentic AI Systems', tags: ['ReACT Agents', 'BSPL', 'Commitment Protocols', 'MCP', 'RAG'] },
       { name: 'Enterprise Software', tags: ['SAP ERP', 'JD Edwards', 'ERP Integration', 'Process Mining', 'Azure DevOps'] },
       { name: 'Data & ML', tags: ['NLP', 'Transformer Models', 'ETL Pipelines', 'Whisper', 'DeBERTa', 'BART'] },
       { name: 'Delivery & Analysis', tags: ['Functional Analysis', 'UAT Design', 'Stakeholder Management', 'Technical Documentation'] },
@@ -81,7 +81,7 @@ export default function Experience() {
         title="Where the work happened."
         subtitle="Enterprise software delivery, academic research, and teaching — across Milan and St. Gallen."
       />
-      <div className="px-10 py-10 max-w-3xl mx-auto space-y-14">
+      <div className="px-6 md:px-10 py-10 max-w-3xl mx-auto space-y-14">
 
         {/* Timeline */}
         <FadeIn>
