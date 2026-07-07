@@ -34,8 +34,7 @@ export default function AcademicProjects() {
 
         {/* Featured IMP */}
         <FadeIn>
-          <div className="border border-rule rounded-xl p-8 mb-10 relative overflow-hidden bg-night3 hover:border-[rgba(212,175,97,0.3)] transition-colors"
-               style={{ borderLeft: '3px solid #d4af61' }}>
+          <div className="border border-rule rounded-xl p-8 mb-10 relative overflow-hidden bg-night3 hover:border-[rgba(212,175,97,0.3)] transition-colors">
             <div className="flex items-center gap-2.5 mb-4">
               <span className="flex items-center gap-1.5 font-mono text-[0.65rem] text-gold uppercase tracking-widest">
                 <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
@@ -79,8 +78,7 @@ export default function AcademicProjects() {
 
         {/* Featured Thesis */}
         <FadeIn delay={0.05}>
-          <div className="border border-rule rounded-xl p-8 mb-10 relative overflow-hidden bg-night3 hover:border-[rgba(212,175,97,0.3)] transition-colors"
-               style={{ borderLeft: '3px solid #d4af61' }}>
+          <div className="border border-rule rounded-xl p-8 mb-10 relative overflow-hidden bg-night3 hover:border-[rgba(212,175,97,0.3)] transition-colors">
             <div className="flex items-center gap-2.5 mb-4">
               <span className="flex items-center gap-1.5 font-mono text-[0.65rem] text-gold uppercase tracking-widest">
                 <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
