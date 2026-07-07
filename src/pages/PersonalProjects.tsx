@@ -15,7 +15,7 @@ const projects = [
     tagline: 'A vocabulary trainer built for my sister.',
     desc: 'My sister needed to prep for the GRE. I built her an app. Flashcards with AI-generated definitions and mnemonics, multiple-choice and written-answer quizzes with semantic grading, per-user progress tracking, and a full admin panel. The kind of project that clarifies what product thinking actually means: you know the user personally, you know exactly what they need, and you have to make it work for them rather than for an abstraction.',
     tags: ['FastAPI', 'PostgreSQL', 'Groq', 'Vanilla JS', 'Docker', 'GCP'],
-    live: 'http://34.17.100.46:8040',
+    live: 'https://gre.salmanranjha.me',
     github: 'https://github.com/salmanranjhaa/GRE_prep_studio',
   },
   {
@@ -23,7 +23,7 @@ const projects = [
     tagline: 'Enterprise RAG system with a proper agentic layer.',
     desc: 'Two agents sharing one enterprise data layer, built around a simulated MedTech ERP company: Weave, a multi-source RAG router that picks between Postgres, a Slack vector store, and a Neo4j org graph per query, and STRATA, a ReACT agent that renders its Thought-Action-Observation loop live as it reasons through multi-hop questions. Voice input via Whisper, live routing logs, and a Star Wars lightsaber colour scheme that somehow makes the interface feel right. Built to understand what production agentic systems actually require.',
     tags: ['FastAPI', 'LlamaIndex', 'PostgreSQL', 'ChromaDB', 'Neo4j', 'ReACT Agents', 'RAG'],
-    live: 'https://erp-rag.34.17.100.46.sslip.io',
+    live: 'https://weave.salmanranjha.me',
     github: 'https://github.com/salmanranjhaa/Weave',
   },
   {
@@ -31,7 +31,7 @@ const projects = [
     tagline: 'A lap-by-lap F1 race strategy simulator.',
     desc: 'You are the race engineer: call tyre strategy, pit timing, and ERS deployment while 19 AI rivals race against you, each a BDI agent with a personality profile modelled on a real 2025 F1 driver. Underneath: LightGBM lap-time and tyre-degradation models trained on real FastF1 telemetry, Monte Carlo Tree Search for pit-window recommendations, Markov-chain weather, and a full Q1-Q2-Q3 qualifying simulation across 24 circuits. The design system from this project is what the rest of the portfolio borrows from.',
     tags: ['FastAPI', 'React', 'TypeScript', 'LightGBM', 'MCTS', 'BDI Agents', 'FastF1'],
-    live: 'https://pitwall.34.17.100.46.sslip.io',
+    live: 'https://pitwall.salmanranjha.me',
     github: 'https://github.com/salmanranjhaa/PitWall',
   },
 ]
