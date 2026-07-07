@@ -55,20 +55,20 @@ export default function Sidebar() {
         </button>
 
         {/* Brand */}
-        <div className="px-7 pt-9 pb-7 border-b border-rule">
+        <div className="px-7 pt-7 pb-5 border-b border-rule">
           <div className="font-serif text-[1.15rem] text-paper leading-tight mb-1.5">
             Salman Ranjha
           </div>
-          <div className="text-[0.65rem] text-muted uppercase tracking-widest leading-relaxed font-mono">
+          <div className="text-[0.65rem] text-muted uppercase tracking-widest leading-snug font-mono">
             MSc Computer Science<br />AI &amp; Data Science<br />University of St. Gallen
           </div>
         </div>
 
         {/* Nav */}
-        <nav className="flex-1 py-5 overflow-y-auto">
+        <nav className="flex-1 min-h-0 py-3 overflow-y-auto">
           {sections.map(section => (
             <div key={section}>
-              <div className="px-7 pt-3.5 pb-1.5 text-[0.6rem] text-[#2a2d3e] uppercase tracking-[0.12em] font-mono">
+              <div className="px-7 pt-2.5 pb-1 text-[0.6rem] text-[#2a2d3e] uppercase tracking-[0.12em] font-mono">
                 {section}
               </div>
               {nav
@@ -80,7 +80,7 @@ export default function Sidebar() {
                     end={to === '/'}
                     onClick={() => setOpen(false)}
                     className={({ isActive }) => `
-                      flex items-center gap-2.5 px-7 py-2.5 text-[0.82rem] transition-all duration-150 relative
+                      flex items-center gap-2.5 px-7 py-2 text-[0.82rem] transition-all duration-150 relative
                       ${isActive
                         ? 'text-gold bg-[rgba(212,175,97,0.06)] before:absolute before:left-0 before:top-1.5 before:bottom-1.5 before:w-0.5 before:bg-gold before:rounded-r'
                         : 'text-muted hover:text-papersoft hover:bg-[#10131e]'
@@ -96,8 +96,8 @@ export default function Sidebar() {
         </nav>
 
         {/* Footer */}
-        <div className="px-7 py-5 border-t border-rule">
-          <div className="flex items-center gap-2 text-[0.65rem] text-muted mb-3">
+        <div className="px-7 py-4 border-t border-rule">
+          <div className="flex items-center gap-2 text-[0.65rem] text-muted mb-2.5">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 flex-shrink-0" />
             Open to opportunities
           </div>
