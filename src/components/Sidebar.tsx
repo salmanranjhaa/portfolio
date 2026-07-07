@@ -1,6 +1,6 @@
 import { NavLink, useLocation } from 'react-router-dom'
 import { useState } from 'react'
-import { Menu, X, Home, User, BookOpen, Zap, Briefcase, FileText, Mail, Github, Linkedin } from 'lucide-react'
+import { Menu, X, Home, User, BookOpen, Zap, Briefcase, FileText, Mail, Github, Linkedin, Compass } from 'lucide-react'
 import { AnimatePresence, motion } from 'framer-motion'
 
 const nav = [
@@ -8,6 +8,7 @@ const nav = [
   { label: 'About',             to: '/about',               icon: User,     section: 'Main' },
   { label: 'Academic Projects', to: '/projects/academic',   icon: BookOpen, section: 'Work' },
   { label: 'Personal Projects', to: '/projects/personal',   icon: Zap,      section: 'Work' },
+  { label: 'Ventures',          to: '/ventures',            icon: Compass,  section: 'Work' },
   { label: 'Experience',        to: '/experience',          icon: Briefcase,section: 'Work' },
   { label: 'Articles',          to: '/articles',            icon: FileText, section: 'Writing' },
 ]

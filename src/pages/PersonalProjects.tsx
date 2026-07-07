@@ -9,7 +9,6 @@ const projects = [
     desc: 'Full-stack fitness platform live at loadedout.online. Workout tracking, meal logging, AI-powered coaching via Vertex AI, and Google Calendar sync. Built entirely solo and used daily. The kind of project that starts as a weekend experiment and turns into a production system you refuse to stop improving.',
     tags: ['FastAPI', 'Vertex AI', 'PostgreSQL', 'Google Calendar API', 'Python'],
     live: 'https://loadedout.online',
-    featured: true,
   },
   {
     title: 'GRE Prep Station',
@@ -18,7 +17,6 @@ const projects = [
     tags: ['FastAPI', 'PostgreSQL', 'Groq', 'Vanilla JS', 'Docker', 'GCP'],
     live: 'http://34.17.100.46:8040',
     github: 'https://github.com/salmanranjhaa/GRE_prep_studio',
-    featured: false,
   },
   {
     title: 'Weave',
@@ -27,7 +25,6 @@ const projects = [
     tags: ['FastAPI', 'LlamaIndex', 'PostgreSQL', 'ChromaDB', 'Neo4j', 'ReACT Agents', 'RAG'],
     live: 'https://erp-rag.34.17.100.46.sslip.io',
     github: 'https://github.com/salmanranjhaa/Weave',
-    featured: false,
   },
   {
     title: 'Pitwall',
@@ -36,7 +33,6 @@ const projects = [
     tags: ['FastAPI', 'React', 'TypeScript', 'LightGBM', 'MCTS', 'BDI Agents', 'FastF1'],
     live: 'https://pitwall.34.17.100.46.sslip.io',
     github: 'https://github.com/salmanranjhaa/PitWall',
-    featured: false,
   },
 ]
 
@@ -51,11 +47,7 @@ export default function PersonalProjects() {
       <div className="px-6 md:px-10 py-10 max-w-3xl mx-auto space-y-5">
         {projects.map((p, i) => (
           <FadeIn key={p.title} delay={i * 0.07}>
-            <div className={`rounded-xl p-7 border transition-all duration-200 hover:bg-[#1c2035] ${
-              p.featured
-                ? 'bg-night3 border-l-[3px] border-gold'
-                : 'bg-night3 border-rule hover:border-[rgba(212,175,97,0.3)]'
-            }`}>
+            <div className="rounded-xl p-7 border transition-all duration-200 hover:bg-[#1c2035] bg-night3 border-rule hover:border-[rgba(212,175,97,0.3)]">
               <div className="flex items-start justify-between gap-4 mb-1">
                 <div>
                   <h3 className="font-serif text-[1.1rem] font-bold text-paper">{p.title}</h3>

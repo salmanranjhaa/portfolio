@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import About from './pages/About'
 import AcademicProjects from './pages/AcademicProjects'
 import PersonalProjects from './pages/PersonalProjects'
+import Ventures from './pages/Ventures'
 import Experience from './pages/Experience'
 import Articles from './pages/Articles'
 import ArticleReader from './pages/ArticleReader'
@@ -19,6 +20,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/projects/academic" element={<AcademicProjects />} />
           <Route path="/projects/personal" element={<PersonalProjects />} />
+          <Route path="/ventures" element={<Ventures />} />
           <Route path="/experience" element={<Experience />} />
           <Route path="/articles" element={<Articles />} />
           <Route path="/articles/:id" element={<ArticleReader />} />
