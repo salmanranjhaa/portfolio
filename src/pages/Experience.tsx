@@ -42,7 +42,7 @@ const education = [
     degree: 'MSc in Computer Science (AI and Data Science specialisation)',
     school: 'University of St. Gallen (HSG)',
     period: '2024 · 2026',
-    note: 'Integrated Master\'s Project: AEGIS-P2P, Auditable Enterprise Governance for SAP Procure-to-Pay',
+    note: 'Master\'s Thesis: recurrent neural decoders for quantum error correction under cosmic ray burst noise · Integrated Master\'s Project: AEGIS-P2P, Auditable Enterprise Governance for SAP Procure-to-Pay',
   },
   {
     degree: 'BSc in Economics, Management and Computer Science',

@@ -14,7 +14,7 @@ const stats = [
 ]
 
 const quickLinks = [
-  { label: 'Academic Projects', desc: 'IMP, HuggingFace Framework, PITAS and other research-backed builds',         to: '/projects/academic', icon: BookOpen },
+  { label: 'Academic Projects', desc: 'Master\'s Thesis on QEC decoders, IMP, HuggingFace Framework, PITAS and other research-backed builds', to: '/projects/academic', icon: BookOpen },
   { label: 'Personal Projects', desc: 'Loadedout, GRE Prep Station, Weave, Pitwall and other things built to solve real problems', to: '/projects/personal', icon: Zap },
   { label: 'Experience',        desc: 'FBK Milan, IRI HSG, Teaching Assistant, Bocconi and HSG education',           to: '/experience',        icon: Briefcase },
   { label: 'About',             desc: 'Who I am, what drives me, and why the enterprise plus AI intersection matters', to: '/about',             icon: User },
