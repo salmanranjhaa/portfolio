@@ -4,14 +4,18 @@ import PageHeader from '../components/PageHeader'
 
 const ventures = [
   {
-    title: 'Polaris',
-    tagline: 'An independent counselling service, and the admissions platform it became.',
-    desc: 'Polaris began as an independent counselling service for Pakistani students, taking no commission from universities so the advice stays honest. Running it exposed the real problem: consultancies manage applications in spreadsheets and WhatsApp. So Polaris became the software too. It is now a platform where counsellors run every case in one place, from intake through offer, with UK, Australian and European admission rules built in. An AI counsellor called رہنما (Rehnuma) works beside the team in English and Urdu, and research agents read university pages and return findings for a human to approve before anything reaches a student record.',
-    tags: ['Admissions Platform', 'AI Agents', 'Counselling', 'EdTech'],
-    links: [
-      { label: 'Counselling', href: 'https://polarisedu.info' },
-      { label: 'Platform', href: 'https://agencies.polarisedu.info' },
-    ],
+    title: 'Polaris Counselling',
+    tagline: 'Independent university counselling for Pakistani students.',
+    desc: 'In Pakistan almost nobody guides students toward the top names in Europe. The agencies that exist earn commission from average private universities, so that is where their students end up, advised by people with a stake in the answer. I went through the process myself and had spent years guiding students through it unofficially, so Polaris does it properly: independent counselling into the best universities in Europe, covering scholarships, housing, documentation, immigration and everything else the process demands.',
+    tags: ['Counselling', 'European Admissions', 'Scholarships', 'Education'],
+    links: [{ label: 'Visit', href: 'https://polarisedu.info' }],
+  },
+  {
+    title: 'Polaris Platform',
+    tagline: 'The software that runs an admissions practice.',
+    desc: 'The platform came out of doing the counselling. It holds a knowledge base of universities, scholarships, visas and requirements, with AI working on top of it, and it manages students, applications, documents, deadlines and the daily work around them in one place. It is built for schools, independent counsellors, consultancies and everyone in between.',
+    tags: ['Admissions Platform', 'AI', 'SaaS', 'EdTech'],
+    links: [{ label: 'Visit', href: 'https://agencies.polarisedu.info' }],
   },
 ]
 
