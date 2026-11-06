@@ -5,10 +5,13 @@ import PageHeader from '../components/PageHeader'
 const ventures = [
   {
     title: 'Polaris',
-    tagline: 'Independent university counselling for Pakistani students.',
-    desc: 'An independent, commission-free counselling service helping Pakistani students get into elite European universities. Most agents steer students toward whichever institution pays them a commission; Polaris takes none, and focuses instead on the funding and scholarship pathways agents rarely disclose, from tuition waivers to fully funded places at top schools across Switzerland, Italy, the Netherlands and Scandinavia.',
-    tags: ['University Counselling', 'Scholarships', 'European Admissions', 'Education'],
-    live: 'https://polarisedu.info',
+    tagline: 'An independent counselling service, and the admissions platform it became.',
+    desc: 'Polaris began as an independent counselling service for Pakistani students, taking no commission from universities so the advice stays honest. Running it exposed the real problem: consultancies manage applications in spreadsheets and WhatsApp. So Polaris became the software too. It is now a platform where counsellors run every case in one place, from intake through offer, with UK, Australian and European admission rules built in. An AI counsellor called رہنما (Rehnuma) works beside the team in English and Urdu, and research agents read university pages and return findings for a human to approve before anything reaches a student record.',
+    tags: ['Admissions Platform', 'AI Agents', 'Counselling', 'EdTech'],
+    links: [
+      { label: 'Counselling', href: 'https://polarisedu.info' },
+      { label: 'Platform', href: 'https://agencies.polarisedu.info' },
+    ],
   },
 ]
 
@@ -29,7 +32,7 @@ export default function Ventures() {
                   <h3 className="font-serif text-[1.1rem] font-bold text-paper">{v.title}</h3>
                   <p className="text-[0.78rem] text-gold font-mono mt-0.5">{v.tagline}</p>
                 </div>
-                {v.live && (
+                {v.links.length > 0 && (
                   <span className="flex-shrink-0 font-mono text-[0.6rem] text-gold bg-[rgba(212,175,97,0.1)] border border-[rgba(212,175,97,0.25)] px-2 py-0.5 rounded uppercase tracking-widest">
                     Live
                   </span>
@@ -41,12 +44,12 @@ export default function Ventures() {
                   {v.tags.map(t => <span key={t} className="tag">{t}</span>)}
                 </div>
                 <div className="flex gap-2">
-                  {v.live && (
-                    <a href={v.live} target="_blank" rel="noopener noreferrer"
+                  {v.links.map(l => (
+                    <a key={l.label} href={l.href} target="_blank" rel="noopener noreferrer"
                        className="flex items-center gap-1.5 text-[0.75rem] font-mono text-gold border border-[rgba(212,175,97,0.3)] px-2.5 py-1 rounded hover:bg-[rgba(212,175,97,0.08)] transition-colors">
-                      <ExternalLink size={12} /> Visit
+                      <ExternalLink size={12} /> {l.label}
                     </a>
-                  )}
+                  ))}
                 </div>
               </div>
             </div>
