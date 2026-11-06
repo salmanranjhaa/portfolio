@@ -4,22 +4,31 @@ import PageHeader from '../components/PageHeader'
 
 const jobs = [
   {
-    role: 'Teaching Assistant, CS Fundamentals',
-    org: 'University of St. Gallen',
-    period: 'Feb 2025 · Ongoing',
+    role: 'Agentic AI Software Engineer',
+    org: 'LabVentures GmbH, St. Gallen',
+    period: 'Sep 2026 · Present',
     bullets: [
-      'Run weekly sessions for 40-50 students covering Python, SQL, and databases, with assignment reviews, exam preparation, and end-to-end project delivery; evaluate team projects on code quality, system design, and presentation.',
-      'Guide students from non-technical backgrounds through full project delivery with a product-first approach; class projects voted best in cohort by peers for two consecutive semesters, out of 12+ parallel exercise classes.',
+      'Build software products at a venture builder with ten ventures, from education to bookkeeping and legal AI, applying AI coding agents to development, QA, and business analysis.',
+      'Developed an automated UAT platform: AI agents deploy apps in isolated environments, derive test scenarios from user journeys and personas, and run them step by step. People approve test plans before any run, and every step is logged with a screenshot and an interpretation. Used for all web and Android products in the portfolio.',
+      'Proofs of concept for an on-premise legal research assistant for Swiss lawyers (federal legislation retrieval, locally hosted models) and a teaching assistant for a HSG course, in use by students and lecturers.',
     ],
   },
   {
-    role: 'Research Assistant',
+    role: 'Teaching Assistant, CS Fundamentals',
+    org: 'University of St. Gallen',
+    period: 'Feb 2025 · Present',
+    bullets: [
+      'Run weekly exercise sessions for 40-50 business students covering Python, databases, SQL, data science, and machine learning; set up their environments and troubleshoot the course tools.',
+      'Coach ten project teams per semester building Streamlit applications on API or database data with a self-trained ML model, and review each final app, code, and video against the course requirements.',
+    ],
+  },
+  {
+    role: 'Research Assistant, Data Science',
     org: 'Institute of Responsible Innovation, HSG',
     period: 'Sep 2025 · Mar 2026',
     bullets: [
-      'Building large-scale data pipelines across 200,000+ Kickstarter projects for entrepreneurship research.',
-      'Audio transcription using Whisper Large v3 on GCP GPU instances, creator biography classification via two-stage NLI pipeline.',
-      'Validated classification models against human-labelled subsets using Cohen\'s kappa.',
+      'Built the data pipelines for a Swiss government-funded study (CHF 500k grant): 200,000+ founder biographies and 20,000+ Kickstarter campaign videos, transcribed with self-hosted Whisper on GPU.',
+      'Designed a two-stage classifier (deterministic rules, then NLI zero-shot inference with DeBERTa and BART), benchmarked LLM providers on accuracy, cost, and latency, and validated it against hand-labelled ground truth (F1, Cohen\'s kappa).',
     ],
   },
   {
@@ -27,12 +36,10 @@ const jobs = [
     org: 'FBK S.r.l., Milan',
     period: 'Nov 2021 · Oct 2024',
     bullets: [
-      'Served 10+ enterprise clients across pharma and medtech, with Johnson & Johnson as primary account from Business Analyst to IT Director engagement.',
-      'Led EUR 200k+ deal closures and managed project streams worth EUR 300k+ for J&J alone.',
-      'Delivered SAP and JD Edwards ERP implementations including custom integrations, data migration, and cross-system workflows.',
-      'Owned a blind price-floor control as PM, technical BA, and single client point of contact: encrypted manufacturing prices invisible even to the sales and tendering teams using them, with any offer below the floor blocked at save.',
-      'Scaled the module from a single-country pilot to all 32 J&J markets; it was later sold to other clients.',
-      'Produced full delivery artefacts: functional analyses, Azure DevOps backlogs, UAT scripts, and hypercare documentation.',
+      'Single point of contact across 10+ enterprise clients of a tender management SaaS used by life sciences multinationals (Johnson & Johnson, Abbott, Stryker) in 30+ countries, under SOC 2 Type II. Owned the J&J engagement end to end, aligning senior stakeholders on decisions in the EUR 300k+ tier.',
+      'Ran technical feasibility for API integrations with SAP and JD Edwards ERP, validated the SAP ECC to S/4HANA endpoint migration, and built Tableau dashboards with role-based access for multi-country tender data.',
+      'Led the data ingestion feature from client discovery to productisation, replacing manual migrations with automated XML-based dossier creation; generated EUR 200k+ in subsequent deal value.',
+      'Led the price control engine update: manufacturing cost encryption and minimum price compliance for jurisdictions where below-cost sales carry legal consequences, deployed across multiple enterprise clients.',
     ],
   },
 ]
@@ -42,7 +49,7 @@ const education = [
     degree: 'MSc in Computer Science (AI and Data Science specialisation)',
     school: 'University of St. Gallen (HSG)',
     period: '2024 · 2026',
-    note: 'Master\'s Thesis: recurrent neural decoders for quantum error correction under cosmic ray burst noise · Integrated Master\'s Project: AEGIS-P2P, Auditable Enterprise Governance for SAP Procure-to-Pay',
+    note: 'Master\'s Thesis: recurrent neural decoders for quantum error correction under cosmic ray burst noise · Integrated Master\'s Project: AEGIS P2P, Auditable Governance for LLM Agents in SAP Procure-to-Pay',
   },
   {
     degree: 'BSc in Economics, Management and Computer Science',

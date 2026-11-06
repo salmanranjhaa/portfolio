@@ -38,35 +38,38 @@ export default function AcademicProjects() {
             <div className="flex items-center gap-2.5 mb-4">
               <span className="flex items-center gap-1.5 font-mono text-[0.65rem] text-gold uppercase tracking-widest">
                 <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
-                Integrated Master's Project · In Progress · Dec 2026
+                Integrated Master's Project · In Progress · Jan 2027
               </span>
             </div>
             <h2 className="font-serif text-[1.25rem] font-bold text-paper mb-1.5 leading-snug">
-              AEGIS-P2P, Auditable Enterprise Governance for Intelligent Systems in Procure-to-Pay
+              AEGIS P2P: Auditable Governance for LLM Agents in SAP Procure-to-Pay
             </h2>
             <div className="font-mono text-[0.7rem] text-muted mb-5">
-              Interactions Lab, University of St. Gallen · Supervised by Prof. Andrei Ciortea · 12 ECTS
+              Interactions Lab, University of St. Gallen · Supervised by Prof. Andrei Ciortea · with Adria Pop
             </div>
             <p className="text-[0.875rem] text-papersoft leading-[1.75] mb-3">
-              Designing a two layer governance gate for LLM driven automation of compliance
-              sensitive SAP Procure-to-Pay workflows, where every action must be auditable before
-              it runs. An LLM proposes actions; a BSPL information protocol determines which
-              actions are structurally possible from the causal flow of information, and a Cupid
-              commitment norm engine determines which are normatively correct. The system proves
-              conformance before execution rather than logging it after.
+              LLM agents may propose Procure-to-Pay actions such as registering invoices, posting goods
+              receipts, or releasing payments, but they do not decide. AEGIS P2P is a governance gate
+              that checks each proposal before it runs. The proposer's role comes from the gate's own
+              registry, not from the agent's claim. The gate has two layers: a BSPL information
+              protocol, verified safe and live with the BSPL reference checker, decides whether an
+              action is enabled in the case, and a Cupid-style norm engine with commitments and
+              deadlines decides whether it is allowed. Every verdict (allowed, blocked, escalated, or
+              routed to manual review) is written to a hash-chained audit log.
             </p>
             <p className="text-[0.875rem] text-papersoft leading-[1.75] mb-3">
-              Evaluated on the BPI Challenge 2019 dataset: 251,000+ real SAP Procure-to-Pay event
-              logs, replayed against formal compliance rules that auto generate verdicts at scale.
-              The headline baseline stack isolates each governance layer: LLM only, LLM plus
-              protocol, LLM plus protocol plus norms, with six ablations and a live LLM containment
-              track under blind and informed conditions.
+              The specification covers 28 P2P actions, 8 roles, and 18 norm declarations, with a
+              vocabulary that covers the public BPI Challenge 2019 SAP log. Preliminary results on 130
+              labelled scenarios: the full gate decides every scenario as labelled, while each layer
+              alone lets forbidden actions through. Across 13,895 seeded manipulated proposals, none was
+              wrongly allowed. Across about 3,000 proposals from four live LLMs, no forbidden request was
+              executed.
             </p>
             <p className="text-[0.875rem] text-papersoft leading-[1.75] mb-5">
-              The target question is the reliability gap enterprises will face as they adopt Joule
-              and the broader SAP Business AI roadmap: not whether the system can act, but whether
-              it can act in a way that is provably auditable before execution, not merely logged
-              after.
+              The target question is the reliability gap enterprises will face as they adopt Joule and
+              the broader SAP Business AI roadmap: not whether an agent can act, but whether each action
+              is provably permitted before execution and auditable afterwards. These results are
+              preliminary; the final evaluation on a frozen corpus and specification is due January 2027.
             </p>
             <div className="flex flex-wrap gap-1.5">
               {['Agentic AI', 'LLMs', 'BSPL', 'Commitment Protocols', 'SAP P2P', 'Process Mining', 'Audit Logs', 'BPI 2019'].map(t => (
