@@ -85,47 +85,47 @@ export default function AcademicProjects() {
             <div className="flex items-center gap-2.5 mb-4">
               <span className="flex items-center gap-1.5 font-mono text-[0.65rem] text-gold uppercase tracking-widest">
                 <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
-                Master's Thesis · In Progress · Oct 2026
+                Master's Thesis · Submitting Nov 2026
               </span>
             </div>
             <h2 className="font-serif text-[1.25rem] font-bold text-paper mb-1.5 leading-snug">
-              QEC Burst Decoder, Recurrent Neural Decoding of the Surface Code under Cosmic Ray Burst Noise
+              Neural Decoders for Correlated Burst Noise in Surface Code Quantum Error Correction
             </h2>
             <div className="font-mono text-[0.7rem] text-muted mb-5">
-              University of St. Gallen · Supervised by Prof. Anna Lena Horlemann · Master's Thesis
+              University of St. Gallen · Supervised by Prof. Anna-Lena Horlemann, co-supervised by Prof. Lukas Gonon · Master's Thesis
             </div>
             <p className="text-[0.875rem] text-papersoft italic leading-[1.75] mb-3">
-              Recurrent neural decoders for cosmic ray noise bursts on the surface code, mapping
-              where decoding is physically possible at all, and which training methods actually
-              get a learner there.
+              Neural decoders for cosmic ray bursts on the surface code, mapping where decoding is
+              possible at all, where a learned decoder beats matching, and how to train one to get
+              there.
             </p>
             <p className="text-[0.875rem] text-papersoft leading-[1.75] mb-3">
-              Investigating whether recurrent neural networks can decode quantum error correcting
-              codes under cosmic ray burst noise, a correlated failure mode that the standard
-              matching decoder is structurally blind to. A distance 5 surface code is simulated
-              in Stim under a two state Markov noise model calibrated from Google's Sycamore
-              cosmic ray measurements, and a compact LSTM decoder is evaluated against minimum
-              weight perfect matching across the full axis of burst severities.
+              Cosmic ray impacts raise the error rate of many qubits on a superconducting chip at
+              once, while the standard matching decoder assumes noise that does not change over
+              time. A distance 5 surface code is simulated in Stim under a two state Markov burst
+              model calibrated to Google's Sycamore cosmic ray measurements. A decoder built from a
+              small convolutional encoder and a two layer LSTM is evaluated against minimum weight
+              perfect matching across the full range of burst severities.
             </p>
             <p className="text-[0.875rem] text-papersoft leading-[1.75] mb-3">
-              The severity sweep maps where decoding is physically possible at all: mild bursts
-              are trivial, the calibrated worst case is an information theoretic wall where every
-              decoder degenerates to a coin flip, and a narrow decodable band lies between. The
-              methodology is strict single variable experimentation over hundreds of thousands of
-              simulated shots per configuration, with byte identical test sets and fully
-              reproducible, seed pinned experiment bundles trained on GPU.
+              The severity sweep maps where decoding is possible: mild bursts are easy for every
+              decoder, the calibrated worst case leaves every decoder at chance, and a decodable
+              band lies between. Every comparison uses the same 50,000 test shots per severity and a
+              paired McNemar test. Training runs use up to a million simulated shots, with byte
+              identical test sets and seed pinned, reproducible experiment bundles.
             </p>
             <p className="text-[0.875rem] text-papersoft leading-[1.75] mb-5">
-              Results so far include a structural proof that perfect burst knowledge cannot help
-              matching based decoding under this noise model, and a training method finding:
-              neural decoders trained from scratch collapse in the strongly correlated regime,
-              but severity transfer, chaining checkpoints from milder to harsher noise, unlocks
-              it, while fine tuning near the wall is measurably destructive and zero shot
-              transfer is optimal there. The learned decoder currently sits within 6 percent of
-              the classical baseline in the hardest decodable regime.
+              Matching cannot use the burst under this noise model. Reweighting the matching graph
+              with perfect knowledge of the burst leaves every correction unchanged, shown by proof
+              and an exhaustive computational check. The neural decoder ties or beats matching at
+              every decodable severity on three independent seeds, with up to 32 percent fewer
+              logical errors. Training from scratch stalls in the strongly correlated regime, and
+              chaining checkpoints from milder to harsher noise gets the learner through. The neural
+              advantage ends just before matching stops decoding, and fine tuning a model at that
+              edge erases what it had learned.
             </p>
             <div className="flex flex-wrap gap-1.5">
-              {['Quantum Error Correction', 'Surface Codes', 'Neural Decoders', 'LSTM', 'Stim', 'PyMatching', 'PyTorch', 'Transfer Learning'].map(t => (
+              {['Quantum Error Correction', 'Surface Codes', 'Neural Decoders', 'LSTM', 'CNN', 'Stim', 'PyMatching', 'PyTorch', 'Transfer Learning'].map(t => (
                 <span key={t} className="tag-accent">{t}</span>
               ))}
             </div>
